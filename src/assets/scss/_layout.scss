@@ -1,0 +1,19 @@
+* {
+  box-sizing: content-box;
+  padding: unset;
+  margin: unset;
+}
+
+body {
+  font-family: 'Spectral', serif;
+  background-color: $baltic-sea;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+::selection {
+  color: $baltic-sea;
+  background: $powder-blue;
+}
