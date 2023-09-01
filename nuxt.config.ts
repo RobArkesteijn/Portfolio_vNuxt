@@ -19,4 +19,19 @@ export default defineNuxtConfig({
       },
     },
   },
+  modules: ['@nuxtjs/i18n', 'nuxt-icon'],
+  i18n: {
+    vueI18n: './i18n.config.ts',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+      },
+      {
+        code: 'nl',
+        iso: 'nl-NL',
+      },
+    ],
+    defaultLocale: 'en',
+  },
 });
