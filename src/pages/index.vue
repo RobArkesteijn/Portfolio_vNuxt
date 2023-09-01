@@ -1,6 +1,15 @@
 <template>
   <div>
-    <AnimatedStripes />
+    <HomeIntro />
+    <AnimatedStripes
+      :list-items="[
+        $t('home.list.aboutMe'),
+        $t('home.list.skills'),
+        $t('home.list.experiences'),
+        $t('home.list.projects'),
+      ]"
+    />
+    <TheFooter />
   </div>
 </template>
 
