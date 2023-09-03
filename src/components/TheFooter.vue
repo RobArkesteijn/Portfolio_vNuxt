@@ -34,7 +34,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding-top: 40px;
   animation: fade-in 2s forwards ease;
   opacity: 0;
 
