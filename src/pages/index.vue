@@ -9,7 +9,6 @@
         $t('home.list.projects'),
       ]"
     />
-    <TheFooter />
   </div>
 </template>
 

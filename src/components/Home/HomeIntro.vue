@@ -2,9 +2,9 @@
   <div class="home-intro">
     <h1 class="home-intro__title">{{ $t('home.welcome') }}</h1>
     <div class="home-intro__text-container">
-      <p class="home-intro__text">{{ $t('home.intro.introBackground') }}</p>
-      <p class="home-intro__text">{{ $t('home.intro.introPassion') }}</p>
-      <p class="home-intro__text">{{ $t('home.intro.introCurrent') }}</p>
+      <p class="home-intro__text" v-html="$t('home.intro.introBackground')" />
+      <p class="home-intro__text" v-html="$t('home.intro.introPassion')" />
+      <p class="home-intro__text" v-html="$t('home.intro.introCurrent')" />
     </div>
   </div>
 </template>
@@ -39,12 +39,15 @@
       left: 0;
       height: 100%;
       width: 3px;
-      background-image: linear-gradient(to bottom, #a9fbd7, #3a373f);
+      background-image: linear-gradient(
+        to bottom,
+        $aquamarine-blue,
+        $baltic-sea
+      );
     }
   }
 
   &__text {
-    font-weight: 200;
     padding-block: 10px;
     padding-left: 20px;
   }

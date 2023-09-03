@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   srcDir: 'src/',
   app: {
     head: {
-      title: 'Rob Arkesteijn',
+      title: 'Rob Arkesteijn | Portfolio',
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
       viewport: 'width=device-width, initial-scale=1',
     },
@@ -19,7 +19,16 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@nuxtjs/i18n', 'nuxt-icon'],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+  modules: ['@nuxtjs/i18n', 'nuxt-icon', 'vue3-carousel-nuxt', '@nuxt/image'],
+  image: {
+    dir: 'assets/images',
+  },
   i18n: {
     vueI18n: './i18n.config.ts',
     locales: [

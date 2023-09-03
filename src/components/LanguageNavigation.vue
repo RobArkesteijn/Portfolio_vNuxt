@@ -21,37 +21,37 @@ const switchLocalePath = useSwitchLocalePath();
 
 <style scoped lang="scss">
 .language-navigation {
-  position: absolute;
   right: 0;
-  padding: 20px;
+  padding-bottom: 40px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   z-index: 99;
 
   &__button {
     text-decoration: none;
+    opacity: 0.5;
     color: $powder-blue;
     border: 1px solid $aquamarine-blue;
     font-weight: 200;
     padding: 5px;
+    margin-inline: 10px;
     box-shadow: 0 0 10px 0.1px $piction-blue;
     transition:
       color 0.3s ease,
-      box-shadow 0.3s ease;
-
-    &:first-child {
-      margin-bottom: 5px;
-    }
+      box-shadow 0.3s ease,
+      opacity 0.3s ease;
 
     &:hover {
       color: $aquamarine-blue;
       box-shadow: 0 0 10px 0.1px $aquamarine-blue;
+      opacity: 1;
     }
   }
 
   &__button-active {
     color: $aquamarine-blue;
     box-shadow: 0 0 10px 0.1px $aquamarine-blue;
+    opacity: 1;
   }
 }
 </style>

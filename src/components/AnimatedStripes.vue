@@ -7,7 +7,7 @@
     >
       <NuxtLink
         v-if="Number(item) !== index"
-        :to="localePath(`/${item.toLowerCase()}`)"
+        :to="localePath(`/${listPath[index]}`)"
         class="animated-stripes__list-item"
       >
         {{ item }}
@@ -19,11 +19,17 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath();
-defineProps({
+const props = defineProps({
   listItems: {
     type: Array<String>,
     default: () => ['0', '1', '2', '3'],
   },
+});
+
+const listPath = computed(() => {
+  return props.listItems.map((item) => {
+    return item.split(' ').join('').toLocaleLowerCase();
+  });
 });
 </script>
 
@@ -36,8 +42,7 @@ defineProps({
   align-items: center;
   height: 50vh;
   width: calc(100vw - 40px);
-  padding-inline: 20px;
-  z-index: -1;
+  padding: 0 20px 40px;
   animation: slide-in 2s forwards ease;
   margin-left: 0;
 
@@ -67,7 +72,7 @@ defineProps({
     background: linear-gradient(
       to right,
       $baltic-sea,
-      $powder-blue,
+      $aquamarine-blue,
       $baltic-sea
     );
   }

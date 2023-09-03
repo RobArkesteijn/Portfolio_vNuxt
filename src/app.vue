@@ -1,6 +1,7 @@
 <template>
   <div>
-    <LanguageNavigation />
     <NuxtPage />
+    <LanguageNavigation />
+    <TheFooter />
   </div>
 </template>
