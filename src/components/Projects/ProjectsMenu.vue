@@ -32,23 +32,40 @@ const setProjectQuery = (project: string) => {
   currentQuery.project = project;
   router.replace({ query: currentQuery });
 };
+
+onMounted(() => {
+  setProjectQuery('Portfolio');
+});
 </script>
 
 <style scoped lang="scss">
 .projects-menu {
   display: flex;
+  flex-direction: column;
   align-items: center;
 
+  @include tablet {
+    flex-direction: row;
+    gap: 40px;
+  }
+
   &__title {
-    position: relative;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 200;
-    right: 16px;
+    padding-bottom: 20px;
+
+    @include tablet {
+      font-size: 48px;
+    }
   }
 
   &__list {
     list-style: none;
     position: relative;
+
+    @include tablet {
+      font-size: 20px;
+    }
 
     &::before {
       content: '';
@@ -66,7 +83,7 @@ const setProjectQuery = (project: string) => {
   }
 
   &__item {
-    padding-left: 19px;
+    padding-left: 16px;
     padding-block: 10px;
     color: $aquamarine-blue;
     transition:

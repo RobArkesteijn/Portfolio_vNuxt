@@ -63,8 +63,8 @@ const skillsArray = [
     link: 'https://firebase.google.com/',
   },
   {
-    logo: 'logos:supabase-icon',
-    link: 'https://supabase.com/',
+    logo: 'logos:material-ui',
+    link: 'https://mui.com/',
   },
   {
     logo: 'vscode-icons:file-type-reactjs',
@@ -90,7 +90,9 @@ onMounted(() => {
   padding: 40px 20px;
 
   &__title {
-    font-size: 48px;
+    font-size: 36px;
+    text-shadow: 1px 1px 1px $black;
+    padding-inline: 40px;
     font-weight: 200;
     text-align: center;
     animation: fade-in 2s forwards ease;

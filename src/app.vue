@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <NuxtLayout>
+    <BackgroundGlow />
+    <PortfolioLogo />
     <NuxtPage />
     <LanguageNavigation />
     <TheFooter />
-  </div>
+  </NuxtLayout>
 </template>

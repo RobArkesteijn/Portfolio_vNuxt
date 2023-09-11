@@ -24,9 +24,17 @@ const localePath = useLocalePath();
     }
   }
 
+  @include tablet {
+    padding: 40px;
+  }
+
   &__arrow {
     font-size: 2em;
     color: $powder-blue;
+
+    @include tablet {
+      font-size: 3em;
+    }
   }
 }
 </style>

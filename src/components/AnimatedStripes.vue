@@ -5,20 +5,19 @@
       :key="`stripe-${index}`"
       class="animated-stripes__list-container"
     >
-      <NuxtLink
+      <NuxtLinkLocale
         v-if="Number(item) !== index"
-        :to="localePath(`/${listPath[index]}`)"
+        :to="`/${listPath[index]}`"
         class="animated-stripes__list-item"
       >
         {{ item }}
-      </NuxtLink>
+      </NuxtLinkLocale>
       <div class="animated-stripes__line"></div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const localePath = useLocalePath();
 const props = defineProps({
   listItems: {
     type: Array<String>,
@@ -28,7 +27,7 @@ const props = defineProps({
 
 const listPath = computed(() => {
   return props.listItems.map((item) => {
-    return item.split(' ').join('').toLocaleLowerCase();
+    return item.split(' ').join('-').toLocaleLowerCase();
   });
 });
 </script>
@@ -44,11 +43,22 @@ const listPath = computed(() => {
   width: calc(100vw - 40px);
   padding: 0 20px 40px;
   animation: slide-in 2s forwards ease;
-  margin-left: 0;
 
   @keyframes slide-in {
     from {
       margin-left: -100%;
+    }
+  }
+
+  @include tablet {
+    margin-block: auto;
+    padding-right: unset;
+    padding-bottom: unset;
+
+    @keyframes slide-in {
+      from {
+        margin-right: -100%;
+      }
     }
   }
 
@@ -57,6 +67,10 @@ const listPath = computed(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__list-item {
@@ -64,6 +78,18 @@ const listPath = computed(() => {
     color: $powder-blue;
     text-decoration: none;
     font-size: 24px;
+    animation: fade-in 2s forwards ease;
+    opacity: 0;
+
+    @keyframes fade-in {
+      to {
+        opacity: 1;
+      }
+    }
+
+    @include tablet {
+      animation-delay: 2s;
+    }
   }
 
   &__line {
@@ -75,6 +101,10 @@ const listPath = computed(() => {
       $aquamarine-blue,
       $baltic-sea
     );
+
+    @include tablet {
+      background: linear-gradient(to right, $baltic-sea, $aquamarine-blue 25%);
+    }
   }
 }
 </style>

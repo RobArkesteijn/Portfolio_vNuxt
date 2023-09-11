@@ -43,12 +43,27 @@ const translationPath = computed(() => {
   &__title {
     font-weight: 200;
     font-size: 24px;
+
+    @include tablet {
+      font-size: 36px;
+    }
   }
 
   &__logo {
     height: 50px;
     width: auto;
     padding-block: 40px;
+
+    @include tablet {
+      height: 75px;
+      padding-block: 60px;
+    }
+  }
+
+  &__text {
+    @include tablet {
+      font-size: 20px;
+    }
   }
 
   &__links {
@@ -56,16 +71,28 @@ const translationPath = computed(() => {
     color: $foam;
     text-shadow: 0 0 20px $piction-blue;
     border-bottom: 1px solid $aquamarine-blue;
+
+    @include tablet {
+      font-size: 20px;
+      padding-top: 40px;
+    }
   }
 }
 
 .fade-in-enter-active,
 .fade-in-leave-active {
-  transition: opacity 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    height 0.5s ease;
 }
 
 .fade-in-enter-from,
 .fade-in-leave-to {
   opacity: 0;
+}
+
+.fade-in-enter-to,
+.fade-in-leave-from {
+  opacity: 1;
 }
 </style>

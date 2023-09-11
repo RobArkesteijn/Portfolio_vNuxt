@@ -36,14 +36,26 @@ defineProps({
     }
   }
 
+  @include tablet {
+    padding-top: 80px;
+  }
+
   &__title {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 200;
+    text-shadow: 1px 1px 1px $black;
+
+    @include tablet {
+      font-size: 48px;
+    }
   }
 
   &__paragraph {
     text-align: left;
-    line-height: 30px;
+
+    @include tablet {
+      font-size: 20px;
+    }
   }
 }
 
@@ -51,11 +63,22 @@ defineProps({
   width: 100%;
   padding-block: 20px 40px;
 
+  @include tablet {
+    padding-block: 40px 80px;
+  }
+
   &__slide {
-    padding: 20px;
+    padding: 0 20px 20px;
     opacity: 0;
     align-items: flex-start;
-    transition: opacity 0.3s ease;
+
+    @include tablet {
+      padding: 0 80px 20px;
+    }
+
+    &--sliding {
+      transition: opacity 0.5s ease;
+    }
 
     &--active {
       opacity: 1;
