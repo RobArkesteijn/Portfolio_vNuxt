@@ -24,9 +24,20 @@
     }
   }
 
+  @include tablet {
+    margin-block: auto;
+    padding-inline: 80px 40px;
+    animation-delay: 2s;
+  }
+
   &__title {
     font-weight: 200;
     font-size: 64px;
+    text-shadow: 1px 1px 1px $black;
+
+    @include tablet {
+      font-size: 72px;
+    }
   }
 
   &__text-container {
@@ -50,6 +61,10 @@
   &__text {
     padding-block: 10px;
     padding-left: 20px;
+
+    @include tablet {
+      font-size: 20px;
+    }
   }
 }
 </style>

@@ -1,6 +1,7 @@
 export default defineI18nConfig(() => ({
   legacy: false,
   warnHtmlMessage: false,
+  lazy: true,
   locale: 'en',
   messages: {
     en: {
@@ -16,9 +17,10 @@ export default defineI18nConfig(() => ({
         },
         list: {
           aboutMe: 'About Me',
-          skills: 'Skills',
           experiences: 'Experiences',
+          home: 'Homepage',
           projects: 'Projects',
+          skills: 'Skills',
         },
       },
       aboutMe: {
@@ -33,15 +35,16 @@ export default defineI18nConfig(() => ({
         },
       },
       skills: {
-        title: 'The skills I master.',
+        title: 'Skills.',
       },
       projects: {
         title: 'Projects',
-        portfolio: 'This is my portfolio',
+        portfolio:
+          'Welcome to my digital showcase, where I proudly present my very own portfolio website as one of my most cherished creations. This website is not just a reflection of my skills and creativity; it embodies the essence of my passion for design and development.',
         nxtdes:
           "NXTDES (Next Destination) is a travel blog that displays all the places I've travelled to over the past four years. On this website I give lots of information about what best ways to travel to a certain location is, or what places you should visit when going there. There is also some standard information about how to travel in general. But now it is being updated to be more than just some information on a screen. An entire new user experience is being added. Find out what features I am referring to, by clicking on the link below! (Currently working for mobile)",
         innosysdelftbv:
-          'InnoSys Delft BV is the company for development, production and integration of innovative and sustainable power electronics systems',
+          "InnoSys Delft BV is the company for development, production and integration of innovative and sustainable power electronics systems. InnoSys Delft BV boasts a wealth of knowledge and experience in the realm of power electronics. It's proficiency covers a wide spectrum of applications, from renewable energy solutions to advanced motor drives.",
         harborndigital:
           "We are Harborn, a digital agency that drives strategic growth by connecting valuable data, simplifying complexity, and focusing on human interaction. We build fully integrated digital ecosystems. Future-proof solutions that enhance people's lives. We assist our clients in anticipating and adapting to new ways of working in a rapidly changing world. Always centered on the human experience.",
       },
@@ -59,9 +62,10 @@ export default defineI18nConfig(() => ({
         },
         list: {
           aboutMe: 'Over mij',
-          skills: 'Vaardigheden',
           experiences: 'Ervaringen',
+          home: 'Homepagina',
           projects: 'Projecten',
+          skills: 'Vaardigheden',
         },
       },
       aboutMe: {
@@ -76,15 +80,16 @@ export default defineI18nConfig(() => ({
         },
       },
       skills: {
-        title: 'Mijn vaardigheden.',
+        title: 'Vaardigheden.',
       },
       projects: {
         title: 'Projecten',
-        portfolio: 'This is my portfolio',
+        portfolio:
+          'Welkom bij mijn digitale showcase, waar ik met trots mijn eigen portfolio website presenteer als een van mijn meest gekoesterde creaties. Deze website is niet slechts een weerspiegeling van mijn vaardigheden en creativiteit; het belichaamt de essentie van mijn passie voor ontwerp en ontwikkeling.',
         nxtdes:
           'NXTDES (Next Destination) is een reisblog die alle plaatsen toont waar ik de afgelopen vier jaar naartoe gereisd ben. Op deze website geef ik veel informatie over de beste manieren om naar een bepaalde locatie te reizen, of welke plaatsen je moet bezoeken als je daarheen gaat. Er is ook wat standaardinformatie over hoe je in het algemeen kunt reizen. Maar nu wordt het bijgewerkt om meer te zijn dan alleen wat informatie op een scherm. Er wordt een geheel nieuwe gebruikerservaring toegevoegd. Ontdek welke functies ik bedoel door op de onderstaande link te klikken! (Momenteel werkzaam voor mobiel)',
         innosysdelftbv:
-          'InnoSys Delft BV is het bedrijf voor de ontwikkeling, productie en integratie van innovatieve en duurzame vermogenselektronicasystemen.',
+          'InnoSys Delft BV is het bedrijf voor de ontwikkeling, productie en integratie van innovatieve en duurzame energiesystemen. InnoSys Delft BV beschikt over een schat aan kennis en ervaring op het gebied van energie-elektronica. Haar deskundigheid bestrijkt een breed scala aan toepassingen, van oplossingen voor hernieuwbare energie tot geavanceerde aandrijfsystemen.',
         harborndigital:
           'Wij zijn Harborn, een digitaal bureau dat strategische groei stimuleert door waardevolle data te verbinden, complexiteit te vereenvoudigen en te focussen op menselijke interactie. Wij bouwen volledig geïntegreerde digitale ecosystemen. Toekomstbestendige oplossingen die het leven van mensen verbeteren. We helpen onze klanten te anticiperen op en zich aan te passen aan nieuwe manieren van werken in een wereld die snel verandert. Altijd gericht op de menselijke ervaring.',
       },

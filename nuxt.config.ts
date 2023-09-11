@@ -1,16 +1,16 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import svgLoader from 'vite-svg-loader';
 export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
   app: {
     head: {
-      title: 'Rob Arkesteijn | Portfolio',
       link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
       viewport: 'width=device-width, initial-scale=1',
     },
   },
   css: ['@/assets/scss/main.scss'],
   vite: {
+    plugins: [svgLoader()],
     css: {
       preprocessorOptions: {
         scss: {
@@ -30,7 +30,9 @@ export default defineNuxtConfig({
     dir: 'assets/images',
   },
   i18n: {
+    baseUrl: 'https://www.robarkes.nl',
     vueI18n: './i18n.config.ts',
+    defaultLocale: 'en',
     locales: [
       {
         code: 'en',
@@ -41,6 +43,27 @@ export default defineNuxtConfig({
         iso: 'nl-NL',
       },
     ],
-    defaultLocale: 'en',
+    customRoutes: 'config',
+    pages: {
+      about: {
+        en: '/about-me',
+        nl: '/over-mij',
+      },
+      skills: {
+        en: '/skills',
+        nl: '/vaardigheden',
+      },
+      experiences: {
+        en: '/experiences',
+        nl: '/ervaringen',
+      },
+      projects: {
+        en: '/projects',
+        nl: '/projecten',
+      },
+    },
+    detectBrowserLanguage: {
+      useCookie: false,
+    },
   },
 });

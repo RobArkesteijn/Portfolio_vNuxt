@@ -43,12 +43,20 @@
     }
   }
 
+  @include tablet {
+    animation-delay: 2s;
+  }
+
   &__link {
     color: $powder-blue;
   }
 
   &__icon {
     font-size: 2.5em;
+
+    @include tablet {
+      font-size: 3.5em;
+    }
   }
 }
 </style>

@@ -21,11 +21,32 @@ const switchLocalePath = useSwitchLocalePath();
 
 <style scoped lang="scss">
 .language-navigation {
-  right: 0;
   padding-bottom: 40px;
   display: flex;
   justify-content: center;
   z-index: 99;
+  gap: 20px;
+  animation: fade-in 2s forwards ease;
+  opacity: 0;
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
+
+  @include tablet {
+    gap: 40px;
+    padding-bottom: 80px;
+    animation-delay: 2s;
+  }
+
+  @include desktop {
+    position: absolute;
+    padding: 80px;
+    top: 0;
+    left: 0;
+  }
 
   &__button {
     text-decoration: none;
@@ -36,6 +57,7 @@ const switchLocalePath = useSwitchLocalePath();
     padding: 5px;
     margin-inline: 10px;
     box-shadow: 0 0 10px 0.1px $piction-blue;
+    background-color: $baltic-sea;
     transition:
       color 0.3s ease,
       box-shadow 0.3s ease,
@@ -45,6 +67,10 @@ const switchLocalePath = useSwitchLocalePath();
       color: $aquamarine-blue;
       box-shadow: 0 0 10px 0.1px $aquamarine-blue;
       opacity: 1;
+    }
+
+    @include tablet {
+      font-size: 24px;
     }
   }
 

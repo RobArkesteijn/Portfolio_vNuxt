@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="homepage">
     <HomeIntro />
     <AnimatedStripes
       :list-items="[
@@ -12,6 +12,25 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+definePageMeta({
+  title: 'home.list.home',
+});
 
-<style scoped lang="scss"></style>
+useHead({
+  meta: [
+    { property: 'og:title', content: 'this is og title for the home page' },
+  ],
+});
+</script>
+
+<style scoped lang="scss">
+.homepage {
+  overflow: hidden;
+
+  @include tablet {
+    display: flex;
+    min-height: calc(90vh - 128px); // 128px = LanguageNavigation height
+  }
+}
+</style>

@@ -6,12 +6,16 @@
 
 body {
   background-color: $baltic-sea;
-  color: $powder-blue;
+  color: $primary-color;
   font-weight: 200;
 
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+p {
+  line-height: 200%;
 }
 
 ::selection {
