@@ -17,6 +17,7 @@
   opacity: 0;
   z-index: 1;
   position: relative;
+  min-height: calc(90vh - 108px);
 
   @include tablet {
     padding-inline: 80px;
@@ -24,7 +25,6 @@
     flex-direction: row-reverse;
     gap: 40px;
     margin-block: auto;
-    min-height: calc(90vh - 108px);
   }
 
   @include desktop {

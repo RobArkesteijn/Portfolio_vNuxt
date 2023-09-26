@@ -29,6 +29,9 @@
         >
       </div>
     </div>
+    <div v-else class="project-description project-description__empty">
+      {{ $t('projects.selectProject') }}
+    </div>
   </Transition>
 </template>
 
@@ -73,9 +76,14 @@ const afterEnter = (el: any) => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-block: auto;
 
   @include tablet {
     padding-block: 80px;
+  }
+
+  &__empty {
+    padding-block: unset;
   }
 
   &__title {

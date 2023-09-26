@@ -90,10 +90,10 @@ onMounted(() => {
   padding: 0 20px 40px;
   display: flex;
   flex-direction: column;
+  min-height: calc(90vh - 108px);
 
   @include tablet {
     padding: 0 40px 0;
-    min-height: calc(90vh - 108px);
   }
 
   @include desktop {
@@ -122,17 +122,15 @@ onMounted(() => {
   }
 
   &__container {
-    padding-top: 20px;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
     z-index: 1;
+    margin-block: auto;
 
     @include desktop {
       grid-template-columns: repeat(5, 1fr);
-      padding-top: unset;
-      margin-block: auto;
     }
   }
 
