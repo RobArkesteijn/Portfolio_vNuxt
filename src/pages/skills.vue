@@ -1,6 +1,5 @@
 <template>
   <div>
-    <ReturnToPrevious />
     <MySkills />
   </div>
 </template>

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <ReturnToPrevious />
     <MyProjects />
   </div>
 </template>

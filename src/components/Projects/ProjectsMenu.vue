@@ -45,16 +45,16 @@ onMounted(() => {
   align-items: center;
 
   @include tablet {
-    flex-direction: row;
-    gap: 40px;
+    align-items: flex-start;
   }
 
   &__title {
     font-size: 36px;
     font-weight: 200;
-    padding-bottom: 20px;
+    padding-block: 91px 20px;
 
     @include tablet {
+      padding-block: unset;
       font-size: 48px;
     }
   }
@@ -85,6 +85,7 @@ onMounted(() => {
   &__item {
     padding-left: 16px;
     padding-block: 10px;
+    cursor: pointer;
     color: $aquamarine-blue;
     transition:
       color 0.3s ease,

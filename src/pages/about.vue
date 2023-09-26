@@ -1,6 +1,5 @@
 <template>
   <div>
-    <ReturnToPrevious />
     <AboutmeCarousel
       :slides="[
         $t('aboutMe.carouselText.pageOne'),

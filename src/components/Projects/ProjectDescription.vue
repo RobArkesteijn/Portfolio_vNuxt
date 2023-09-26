@@ -1,11 +1,16 @@
 <template>
-  <Transition name="fade-in" mode="out-in">
+  <Transition
+    name="fade-in"
+    mode="out-in"
+    @before-leave="beforeLeave"
+    @enter="enter"
+    @after-enter="afterEnter"
+  >
     <div
       v-if="$route.query.project"
       :key="translationPath"
       class="project-description"
     >
-      <h3 class="project-description__title">{{ $route.query.project }}</h3>
       <NuxtImg
         :src="`/${translationPath}.png`"
         :alt="`${$route.query.project} Logo`"
@@ -16,7 +21,12 @@
         v-html="$t(`projects.${translationPath}`)"
       />
       <div class="project-description__links">
-        <NuxtLink class="project-description__link">Website</NuxtLink>
+        <NuxtLink
+          class="project-description__link"
+          to="https://www.harborn.com"
+          target="_blank"
+          >Website</NuxtLink
+        >
       </div>
     </div>
   </Transition>
@@ -24,21 +34,49 @@
 
 <script setup lang="ts">
 const { $router } = useNuxtApp();
+const prevHeight = ref();
+
 const translationPath = computed(() => {
   const project = $router.currentRoute.value.query.project as string;
-  return project
-    .toLowerCase()
-    .split(/[^a-zA-Z0-9]+/)
-    .join('');
+  if (project) {
+    return project
+      .toLowerCase()
+      .split(/[^a-zA-Z0-9]+/)
+      .join('');
+  } else {
+    return 'portfolio';
+  }
 });
+
+const beforeLeave = (el: any) => {
+  prevHeight.value = getComputedStyle(el).height;
+};
+
+const enter = (el: any) => {
+  const { height } = getComputedStyle(el);
+
+  el.style.height = prevHeight.value;
+
+  setTimeout(() => {
+    el.style.height = height;
+  });
+};
+
+const afterEnter = (el: any) => {
+  el.style.height = 'auto';
+};
 </script>
 
 <style scoped lang="scss">
 .project-description {
-  padding-top: 40px;
+  padding-block: 20px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include tablet {
+    padding-block: 80px;
+  }
 
   &__title {
     font-weight: 200;
@@ -56,7 +94,6 @@ const translationPath = computed(() => {
 
     @include tablet {
       height: 75px;
-      padding-block: 60px;
     }
   }
 
@@ -68,7 +105,6 @@ const translationPath = computed(() => {
 
   &__links {
     padding-top: 20px;
-    color: $foam;
     text-shadow: 0 0 20px $piction-blue;
     border-bottom: 1px solid $aquamarine-blue;
 
@@ -76,6 +112,11 @@ const translationPath = computed(() => {
       font-size: 20px;
       padding-top: 40px;
     }
+  }
+
+  &__link {
+    color: $foam;
+    text-decoration: none;
   }
 }
 
@@ -89,10 +130,5 @@ const translationPath = computed(() => {
 .fade-in-enter-from,
 .fade-in-leave-to {
   opacity: 0;
-}
-
-.fade-in-enter-to,
-.fade-in-leave-from {
-  opacity: 1;
 }
 </style>

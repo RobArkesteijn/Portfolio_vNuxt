@@ -35,6 +35,7 @@ const listPath = computed(() => {
 <style scoped lang="scss">
 .animated-stripes {
   position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -52,14 +53,20 @@ const listPath = computed(() => {
 
   @include tablet {
     margin-block: auto;
-    padding-right: unset;
-    padding-bottom: unset;
+    padding: unset;
+    width: 100vw;
+    margin-right: 40px;
 
     @keyframes slide-in {
       from {
         margin-right: -100%;
       }
     }
+  }
+
+  @include desktop {
+    margin-right: 80px;
+    width: 50vw;
   }
 
   &__list-container {
@@ -75,9 +82,13 @@ const listPath = computed(() => {
 
   &__list-item {
     font-weight: 200;
-    color: $powder-blue;
+    color: $foam;
+    text-shadow: 1px 1px 0 $black;
     text-decoration: none;
     font-size: 24px;
+    transition:
+      color 0.3s ease,
+      text-shadow 0.3s ease;
     animation: fade-in 2s forwards ease;
     opacity: 0;
 
@@ -87,8 +98,18 @@ const listPath = computed(() => {
       }
     }
 
+    &:hover {
+      color: $foam;
+      text-shadow: 0 0 20px $piction-blue;
+    }
+
     @include tablet {
       animation-delay: 2s;
+      font-size: 28px;
+    }
+
+    @include desktop {
+      line-height: 170%;
     }
   }
 
@@ -101,10 +122,6 @@ const listPath = computed(() => {
       $aquamarine-blue,
       $baltic-sea
     );
-
-    @include tablet {
-      background: linear-gradient(to right, $baltic-sea, $aquamarine-blue 25%);
-    }
   }
 }
 </style>

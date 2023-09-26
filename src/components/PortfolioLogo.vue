@@ -14,27 +14,22 @@
   top: 0;
   right: 0;
   z-index: 99;
-  animation: fade-in 2s forwards ease;
-  opacity: 0;
-
-  @keyframes fade-in {
-    to {
-      opacity: 1;
-    }
-  }
-
-  @include tablet {
-    animation-delay: 2s;
-  }
+  overflow: hidden;
 
   &__image {
     height: 37.5px;
+    width: 37.5px;
     padding: 20px;
     text-shadow: 0 0 2px $black;
 
     @include tablet {
       height: 75px;
+      width: 75px;
       padding: 40px;
+    }
+
+    @include desktop {
+      padding: 40px 80px;
     }
   }
 }

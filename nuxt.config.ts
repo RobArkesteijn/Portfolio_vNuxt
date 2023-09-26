@@ -25,7 +25,18 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  modules: ['@nuxtjs/i18n', 'nuxt-icon', 'vue3-carousel-nuxt', '@nuxt/image'],
+  modules: [
+    '@nuxtjs/i18n',
+    'nuxt-icon',
+    'vue3-carousel-nuxt',
+    '@nuxt/image',
+    '@hypernym/nuxt-gsap',
+  ],
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true,
+    },
+  },
   image: {
     dir: 'assets/images',
   },

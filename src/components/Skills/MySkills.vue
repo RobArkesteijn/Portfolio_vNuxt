@@ -87,12 +87,23 @@ onMounted(() => {
 
 <style scoped lang="scss">
 .my-skills {
-  padding: 40px 20px;
+  padding: 0 20px 40px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    padding: 0 40px 0;
+    min-height: calc(90vh - 108px);
+  }
+
+  @include desktop {
+    min-height: calc(90vh - 128px);
+  }
 
   &__title {
+    padding-top: 91px;
     font-size: 36px;
     text-shadow: 1px 1px 1px $black;
-    padding-inline: 40px;
     font-weight: 200;
     text-align: center;
     animation: fade-in 2s forwards ease;
@@ -103,6 +114,11 @@ onMounted(() => {
         opacity: 1;
       }
     }
+
+    @include tablet {
+      padding-top: 111px;
+      font-size: 48px;
+    }
   }
 
   &__container {
@@ -110,10 +126,17 @@ onMounted(() => {
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    z-index: 1;
+
+    @include desktop {
+      grid-template-columns: repeat(5, 1fr);
+      padding-top: unset;
+      margin-block: auto;
+    }
   }
 
   &__icon {
-    position: relative;
     font-size: 48px;
     margin-block: 10px;
     scale: 0.1;
@@ -126,6 +149,12 @@ onMounted(() => {
     &:hover {
       border: 1px solid $aquamarine-blue;
       box-shadow: 0 0 20px 0.1px $piction-blue;
+    }
+
+    @include tablet {
+      font-size: 64px;
+      margin-block: 20px;
+      padding: 20px;
     }
   }
 }
