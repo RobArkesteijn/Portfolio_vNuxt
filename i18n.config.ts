@@ -39,6 +39,7 @@ export default defineI18nConfig(() => ({
       },
       projects: {
         title: 'Projects',
+        selectProject: 'Please select a project..',
         portfolio:
           'Welcome to my digital showcase, where I proudly present my very own portfolio website as one of my most cherished creations. This website is not just a reflection of my skills and creativity; it embodies the essence of my passion for design and development.',
         nxtdes:
@@ -84,6 +85,7 @@ export default defineI18nConfig(() => ({
       },
       projects: {
         title: 'Projecten',
+        selectProject: 'Selecteer a.u.b. een project..',
         portfolio:
           'Welkom bij mijn digitale showcase, waar ik met trots mijn eigen portfolio website presenteer als een van mijn meest gekoesterde creaties. Deze website is niet slechts een weerspiegeling van mijn vaardigheden en creativiteit; het belichaamt de essentie van mijn passie voor ontwerp en ontwikkeling.',
         nxtdes:

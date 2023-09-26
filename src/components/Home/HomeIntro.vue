@@ -13,7 +13,7 @@
 
 <style scoped lang="scss">
 .home-intro {
-  padding: 40px 20px;
+  padding: 20px;
   color: $powder-blue;
   animation: fade-in 2s forwards ease;
   opacity: 0;

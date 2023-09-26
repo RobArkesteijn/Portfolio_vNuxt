@@ -22,8 +22,8 @@ const route = useRoute();
 const router = useRouter();
 const projects = [
   'Portfolio',
-  'NXTDES',
   'Innosys Delft B.V.',
+  'NXTDES',
   'Harborn Digital',
 ];
 
@@ -51,7 +51,7 @@ onMounted(() => {
   &__title {
     font-size: 36px;
     font-weight: 200;
-    padding-block: 91px 20px;
+    padding-block: 91px 40px;
 
     @include tablet {
       padding-block: unset;
@@ -62,34 +62,50 @@ onMounted(() => {
   &__list {
     list-style: none;
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $aquamarine-blue;
+    border: solid 1px $aquamarine-blue;
+    gap: 1px;
 
     @include tablet {
+      grid: unset;
+      background-color: unset;
+      border: unset;
       font-size: 20px;
-    }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 3px;
-      background-image: linear-gradient(
-        to bottom,
-        $aquamarine-blue,
-        $baltic-sea
-      );
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-image: linear-gradient(
+          to bottom,
+          $aquamarine-blue,
+          $baltic-sea
+        );
+      }
     }
   }
 
   &__item {
-    padding-left: 16px;
-    padding-block: 10px;
     cursor: pointer;
+    background-color: $baltic-sea;
+    width: calc(100% - 20px);
+    text-align: center;
+    padding: 10px;
     color: $aquamarine-blue;
     transition:
       color 0.3s ease,
       text-shadow 0.3s ease;
+
+    @include tablet {
+      background-color: unset;
+      text-align: left;
+      padding: 10px 0 10px 16px;
+    }
   }
 
   &__item-active {
