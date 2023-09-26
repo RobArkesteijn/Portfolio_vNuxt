@@ -35,7 +35,7 @@ export default defineI18nConfig(() => ({
         },
       },
       skills: {
-        title: 'Skills.',
+        title: 'The skills I master.',
       },
       projects: {
         title: 'Projects',
@@ -80,7 +80,7 @@ export default defineI18nConfig(() => ({
         },
       },
       skills: {
-        title: 'Vaardigheden.',
+        title: 'De vaardigheden die ik beheers.',
       },
       projects: {
         title: 'Projecten',

@@ -24,6 +24,7 @@ const switchLocalePath = useSwitchLocalePath();
   padding-bottom: 40px;
   display: flex;
   justify-content: center;
+  position: relative;
   z-index: 99;
   gap: 20px;
   animation: fade-in 2s forwards ease;
@@ -37,15 +38,12 @@ const switchLocalePath = useSwitchLocalePath();
 
   @include tablet {
     gap: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     animation-delay: 2s;
   }
 
   @include desktop {
-    position: absolute;
-    padding: 80px;
-    top: 0;
-    left: 0;
+    padding-bottom: 80px;
   }
 
   &__button {
@@ -55,7 +53,6 @@ const switchLocalePath = useSwitchLocalePath();
     border: 1px solid $aquamarine-blue;
     font-weight: 200;
     padding: 5px;
-    margin-inline: 10px;
     box-shadow: 0 0 10px 0.1px $piction-blue;
     background-color: $baltic-sea;
     transition:

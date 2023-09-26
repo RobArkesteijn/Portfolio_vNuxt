@@ -17,6 +17,8 @@
   color: $powder-blue;
   animation: fade-in 2s forwards ease;
   opacity: 0;
+  z-index: 1;
+  position: relative;
 
   @keyframes fade-in {
     to {
@@ -26,8 +28,12 @@
 
   @include tablet {
     margin-block: auto;
-    padding-inline: 80px 40px;
+    padding: 0 0 0 80px;
     animation-delay: 2s;
+  }
+
+  @include desktop {
+    padding: 0 0 0 160px;
   }
 
   &__title {
@@ -37,6 +43,10 @@
 
     @include tablet {
       font-size: 72px;
+    }
+
+    @include desktop-xl {
+      font-size: 96px;
     }
   }
 
@@ -64,6 +74,10 @@
 
     @include tablet {
       font-size: 20px;
+    }
+
+    @include desktop-xl {
+      font-size: 24px;
     }
   }
 }

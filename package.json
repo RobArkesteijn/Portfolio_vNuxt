@@ -13,8 +13,9 @@
     "lintfix": "prettier --write --list-different src/ && npm run lint:js --fix"
   },
   "devDependencies": {
+    "@hypernym/nuxt-gsap": "^2.4.1",
     "@nuxt/devtools": "latest",
-    "@nuxtjs/i18n": "^8.0.0-rc.3",
+    "@nuxtjs/i18n": "^8.0.0-rc.4",
     "@types/node": "^20.5.7",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -23,15 +24,15 @@
     "vite-svg-loader": "^4.0.0"
   },
   "dependencies": {
-    "@nuxt/image": "^1.0.0-rc.1",
+    "@nuxt/image": "^1.0.0-rc.2",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "firebase": "^10.3.0",
-    "gsap": "^3.12.2",
     "prettier": "^3.0.3",
     "sass": "^1.66.1",
     "typescript": "^5.2.2",
-    "vue3-carousel-nuxt": "^1.1.0"
+    "vue3-carousel-nuxt": "^1.1.0",
+    "vue3-click-away": "^1.2.4"
   }
 }

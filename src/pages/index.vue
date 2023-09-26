@@ -31,6 +31,11 @@ useHead({
   @include tablet {
     display: flex;
     min-height: calc(90vh - 128px); // 128px = LanguageNavigation height
+    gap: 40px;
+  }
+
+  @include desktop {
+    gap: 160px;
   }
 }
 </style>

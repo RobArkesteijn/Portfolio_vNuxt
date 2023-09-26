@@ -12,18 +12,10 @@
   opacity: 0.35;
   width: 300px;
   height: 300px;
-  animation: fade-in 2s forwards ease;
-
-  @keyframes fade-in {
-    to {
-      opacity: 0.35;
-    }
-  }
 
   @include tablet {
     height: 500px;
     width: 500px;
-    animation-delay: 2s;
   }
 }
 </style>

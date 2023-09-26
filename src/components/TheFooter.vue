@@ -5,22 +5,23 @@
       target="_blank"
       class="footer__link"
     >
-      <Icon name="mdi:email" class="footer__icon" />
+      <EmailIcon class="footer__icon" />
     </NuxtLink>
     <NuxtLink
       href="https://www.linkedin.com/in/rob-arkesteijn-394550267/"
       target="_blank"
       class="footer__link"
     >
-      <Icon name="mdi:linkedin" class="footer__icon" />
+      <LinkedinIcon class="footer__icon" />
     </NuxtLink>
     <NuxtLink
       href="https://github.com/RobArkesteijn"
       target="_black"
       class="footer__link"
     >
-      <Icon name="mdi:github" class="footer__icon" />
+      <GitHub class="footer__icon" />
     </NuxtLink>
+    <LayeredWaves />
   </div>
 </template>
 
@@ -28,6 +29,7 @@
 
 <style scoped lang="scss">
 .footer {
+  position: relative;
   height: 10vh;
   width: calc(100% - 40px);
   padding-inline: 20px;
@@ -47,12 +49,12 @@
     animation-delay: 2s;
   }
 
-  &__link {
-    color: $powder-blue;
-  }
-
   &__icon {
     font-size: 2.5em;
+
+    &:hover {
+      fill: $foam;
+    }
 
     @include tablet {
       font-size: 3.5em;

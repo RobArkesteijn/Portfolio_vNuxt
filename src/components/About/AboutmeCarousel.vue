@@ -1,7 +1,7 @@
 <template>
   <div class="about-me-carousel">
     <h1 class="about-me-carousel__title">{{ $t('aboutMe.title') }}</h1>
-    <Carousel :mouse-drag="false">
+    <Carousel :mouse-drag="true">
       <slide v-for="(slide, index) in slides" :key="`slide-${index}`">
         <p class="about-me-carousel__paragraph" v-html="slide" />
       </slide>
@@ -23,12 +23,13 @@ defineProps({
 
 <style scoped lang="scss">
 .about-me-carousel {
-  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   animation: fade-in 2s forwards ease;
   opacity: 0;
+  z-index: 1;
+  position: relative;
 
   @keyframes fade-in {
     to {
@@ -36,16 +37,14 @@ defineProps({
     }
   }
 
-  @include tablet {
-    padding-top: 80px;
-  }
-
   &__title {
+    padding-top: 91.5px;
     font-size: 36px;
     font-weight: 200;
     text-shadow: 1px 1px 1px $black;
 
     @include tablet {
+      padding-top: 80px;
       font-size: 48px;
     }
   }
@@ -55,6 +54,19 @@ defineProps({
 
     @include tablet {
       font-size: 20px;
+      height: calc(90vh - 108px - 235px);
+      padding-block: 20px;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    @include desktop {
+      height: calc(90vh - 128px - 235px);
     }
   }
 }
@@ -64,16 +76,29 @@ defineProps({
   padding-block: 20px 40px;
 
   @include tablet {
-    padding-block: 40px 80px;
+    padding-block: unset;
   }
 
   &__slide {
     padding: 0 20px 20px;
     opacity: 0;
     align-items: flex-start;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
 
     @include tablet {
-      padding: 0 80px 20px;
+      padding: 0 80px;
+    }
+
+    @include desktop {
+      padding-inline: 240px;
+    }
+
+    @include desktop-xl {
+      padding-inline: 320px;
     }
 
     &--sliding {
@@ -86,7 +111,11 @@ defineProps({
   }
 
   &__pagination {
-    margin-block: 10px;
+    padding-block: 10px;
+
+    @include tablet {
+      padding-block: 20px 40px;
+    }
 
     &:deep(.carousel__pagination-button) {
       padding-inline: 8px;
