@@ -35,12 +35,6 @@
             >{{ $t('home.list.skills') }}</NuxtLink
           >
           <NuxtLink
-            :to="slugPath(t('home.list.experiences'))"
-            class="return-to-previous__item"
-            @click="() => (listOpenState = false)"
-            >{{ $t('home.list.experiences') }}</NuxtLink
-          >
-          <NuxtLink
             :to="slugPath(t('home.list.projects'))"
             class="return-to-previous__item"
             @click="() => (listOpenState = false)"

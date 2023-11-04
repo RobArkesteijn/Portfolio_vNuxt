@@ -84,6 +84,10 @@ const afterEnter = (el: any) => {
 
   &__empty {
     padding-block: unset;
+
+    @include tablet {
+      width: 100%;
+    }
   }
 
   &__title {
