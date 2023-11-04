@@ -124,6 +124,7 @@ defineProps({
         background-color: rgba($aquamarine-blue, 0.2);
       }
     }
+
     &:deep(.carousel__pagination-button--active) {
       &::after {
         background-color: $aquamarine-blue;

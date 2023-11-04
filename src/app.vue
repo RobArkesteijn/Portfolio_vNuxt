@@ -2,7 +2,7 @@
   <NuxtLayout>
     <TopBlob />
     <PortfolioLogo />
-    <ReturnToPrevious v-if="$route.path !== localePath('/')" />
+    <TheBreadcrumb v-if="$route.path !== localePath('/')" />
     <NuxtPage />
     <LanguageNavigation />
     <TheFooter />

@@ -13,7 +13,10 @@ const title = computed(() => t(route.meta.title));
   <div>
     <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
       <Head>
-        <Title>{{ `${title} | Portfolio | Rob Arkesteijn` }}</Title>
+        <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta name="theme-color" content="#233746" />
+        <Title>{{ `${title} | Rob Arkesteijn` }}</Title>
+        <Link rel="icon" type="image/png" href="/favicon.png" />
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"
@@ -25,6 +28,7 @@ const title = computed(() => t(route.meta.title));
         <template v-for="meta in head.meta" :key="meta.id">
           <Meta
             :id="meta.id"
+            :name="meta.name"
             :property="meta.property"
             :content="meta.content"
           />

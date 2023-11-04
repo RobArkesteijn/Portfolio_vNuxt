@@ -17,7 +17,7 @@ export default defineI18nConfig(() => ({
         },
         list: {
           aboutMe: 'About Me',
-          experiences: 'Experiences',
+          services: 'Services',
           home: 'Homepage',
           projects: 'Projects',
           skills: 'Skills',
@@ -36,6 +36,9 @@ export default defineI18nConfig(() => ({
       },
       skills: {
         title: 'The skills I master.',
+      },
+      services: {
+        title: 'The services that I offer..',
       },
       projects: {
         title: 'Projects',
@@ -63,7 +66,7 @@ export default defineI18nConfig(() => ({
         },
         list: {
           aboutMe: 'Over mij',
-          experiences: 'Ervaringen',
+          services: 'Diensten',
           home: 'Homepagina',
           projects: 'Projecten',
           skills: 'Vaardigheden',
@@ -82,6 +85,9 @@ export default defineI18nConfig(() => ({
       },
       skills: {
         title: 'De vaardigheden die ik beheers.',
+      },
+      services: {
+        title: 'De diensten die ik aanbied.',
       },
       projects: {
         title: 'Projecten',

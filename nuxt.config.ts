@@ -2,12 +2,6 @@ import svgLoader from 'vite-svg-loader';
 export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: 'src/',
-  app: {
-    head: {
-      link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }],
-      viewport: 'width=device-width, initial-scale=1',
-    },
-  },
   css: ['@/assets/scss/main.scss'],
   vite: {
     plugins: [svgLoader()],
@@ -33,12 +27,13 @@ export default defineNuxtConfig({
     '@hypernym/nuxt-gsap',
   ],
   gsap: {
+    composables: true,
     extraPlugins: {
       scrollTrigger: true,
     },
   },
   image: {
-    dir: 'assets/images',
+    format: ['webp'],
   },
   i18n: {
     baseUrl: 'https://www.robarkes.nl',
@@ -64,9 +59,9 @@ export default defineNuxtConfig({
         en: '/skills',
         nl: '/vaardigheden',
       },
-      experiences: {
-        en: '/experiences',
-        nl: '/ervaringen',
+      services: {
+        en: '/services',
+        nl: '/diensten',
       },
       projects: {
         en: '/projects',
