@@ -44,9 +44,6 @@ export default defineNuxtConfig({
       scrollTrigger: true,
     },
   },
-  image: {
-    format: ['webp'],
-  },
   i18n: {
     baseUrl: 'https://www.robarkes.nl',
     vueI18n: './i18n.config.ts',
@@ -74,10 +71,6 @@ export default defineNuxtConfig({
       skills: {
         en: '/skills',
         nl: '/vaardigheden',
-      },
-      services: {
-        en: '/services',
-        nl: '/diensten',
       },
       projects: {
         en: '/projects',

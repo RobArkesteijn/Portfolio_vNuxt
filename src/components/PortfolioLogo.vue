@@ -1,7 +1,14 @@
 <template>
   <div class="logo">
     <NuxtLinkLocale to="/">
-      <NuxtImg src="/logo.png" alt="Portfolio logo`" class="logo__image" />
+      <NuxtImg
+        src="/logo.png"
+        alt="Portfolio logo"
+        class="logo__image"
+        height="38"
+        width="38"
+        format="webp"
+      />
     </NuxtLinkLocale>
   </div>
 </template>
@@ -17,15 +24,13 @@
   overflow: hidden;
 
   &__image {
-    height: 37.5px;
-    width: 37.5px;
     padding: 20px;
     text-shadow: 0 0 2px $black;
 
     @include tablet {
+      padding: 40px;
       height: 75px;
       width: 75px;
-      padding: 40px;
     }
 
     @include desktop {

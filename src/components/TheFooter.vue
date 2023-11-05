@@ -4,6 +4,7 @@
       href="mailto:rarkesteijn@outlook.com"
       target="_blank"
       class="footer__link"
+      :aria-label="$t('footer.email')"
     >
       <EmailIcon class="footer__icon" />
     </NuxtLink>
@@ -11,6 +12,7 @@
       href="https://www.linkedin.com/in/rob-arkesteijn-394550267/"
       target="_blank"
       class="footer__link"
+      :aria-label="$t('footer.linkedin')"
     >
       <LinkedinIcon class="footer__icon" />
     </NuxtLink>
@@ -18,6 +20,7 @@
       href="https://github.com/RobArkesteijn"
       target="_black"
       class="footer__link"
+      :aria-label="$t('footer.github')"
     >
       <GitHub class="footer__icon" />
     </NuxtLink>

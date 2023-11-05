@@ -15,6 +15,7 @@
         :src="`/${translationPath}.png`"
         :alt="`${$route.query.project} Logo`"
         class="project-description__logo"
+        format="webp"
       />
       <p
         class="project-description__text"

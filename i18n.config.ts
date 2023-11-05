@@ -17,7 +17,6 @@ export default defineI18nConfig(() => ({
         },
         list: {
           aboutMe: 'About Me',
-          services: 'Services',
           home: 'Homepage',
           projects: 'Projects',
           skills: 'Skills',
@@ -37,9 +36,6 @@ export default defineI18nConfig(() => ({
       skills: {
         title: 'The skills I master.',
       },
-      services: {
-        title: 'The services that I offer..',
-      },
       projects: {
         title: 'Projects',
         selectProject: 'Please select a project..',
@@ -51,6 +47,11 @@ export default defineI18nConfig(() => ({
           "InnoSys Delft BV is the company for development, production and integration of innovative and sustainable power electronics systems. InnoSys Delft BV boasts a wealth of knowledge and experience in the realm of power electronics. It's proficiency covers a wide spectrum of applications, from renewable energy solutions to advanced motor drives.",
         harborndigital:
           "We are Harborn, a digital agency that drives strategic growth by connecting valuable data, simplifying complexity, and focusing on human interaction. We build fully integrated digital ecosystems. Future-proof solutions that enhance people's lives. We assist our clients in anticipating and adapting to new ways of working in a rapidly changing world. Always centered on the human experience.",
+      },
+      footer: {
+        email: 'Send me an e-mail',
+        linkedin: 'Check my LinkedIn profile',
+        github: 'Check my Github profile',
       },
       meta: {
         home: {
@@ -88,7 +89,6 @@ export default defineI18nConfig(() => ({
         },
         list: {
           aboutMe: 'Over mij',
-          services: 'Diensten',
           home: 'Homepagina',
           projects: 'Projecten',
           skills: 'Vaardigheden',
@@ -108,9 +108,6 @@ export default defineI18nConfig(() => ({
       skills: {
         title: 'De vaardigheden die ik beheers.',
       },
-      services: {
-        title: 'De diensten die ik aanbied.',
-      },
       projects: {
         title: 'Projecten',
         selectProject: 'Selecteer a.u.b. een project..',
@@ -122,6 +119,11 @@ export default defineI18nConfig(() => ({
           'InnoSys Delft BV is het bedrijf voor de ontwikkeling, productie en integratie van innovatieve en duurzame energiesystemen. InnoSys Delft BV beschikt over een schat aan kennis en ervaring op het gebied van energie-elektronica. Haar deskundigheid bestrijkt een breed scala aan toepassingen, van oplossingen voor hernieuwbare energie tot geavanceerde aandrijfsystemen.',
         harborndigital:
           'Wij zijn Harborn, een digitaal bureau dat strategische groei stimuleert door waardevolle data te verbinden, complexiteit te vereenvoudigen en te focussen op menselijke interactie. Wij bouwen volledig geïntegreerde digitale ecosystemen. Toekomstbestendige oplossingen die het leven van mensen verbeteren. We helpen onze klanten te anticiperen op en zich aan te passen aan nieuwe manieren van werken in een wereld die snel verandert. Altijd gericht op de menselijke ervaring.',
+      },
+      footer: {
+        email: 'Stuur mij een e-mail',
+        linkedin: 'Zie mijn LinkedIn profiel',
+        github: 'Zie mijn Github profiel',
       },
       meta: {
         home: {
