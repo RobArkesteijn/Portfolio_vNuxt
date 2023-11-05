@@ -18,6 +18,7 @@
     "@hypernym/nuxt-gsap": "^2.4.1",
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "^8.0.0-rc.4",
+    "@vite-pwa/nuxt": "^0.1.1",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "nuxt": "^3.8.0",

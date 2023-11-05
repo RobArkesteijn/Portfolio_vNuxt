@@ -1,5 +1,6 @@
 <template>
   <NuxtLayout>
+    <VitePwaManifest />
     <TopBlob />
     <PortfolioLogo />
     <TheBreadcrumb v-if="$route.path !== localePath('/')" />

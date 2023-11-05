@@ -27,7 +27,49 @@ export default defineNuxtConfig({
     '@hypernym/nuxt-gsap',
     'nuxt-og-image',
     '@nuxtjs/robots',
+    '@vite-pwa/nuxt',
   ],
+  pwa: {
+    manifest: {
+      name: 'R.A. | Portfolio',
+      short_name: 'Portfolio',
+      description:
+        "Rob Arkesteijn's personal website. Where he shares his passion for software development. A showcase of his projects, skills, and experience.",
+      icons: [
+        {
+          src: '/pwa/icon-64.png',
+          sizes: '64x64',
+          type: 'image/png',
+        },
+        {
+          src: '/pwa/icon-144.png',
+          sizes: '144x144',
+          type: 'image/png',
+        },
+        {
+          src: '/pwa/icon-192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        },
+        {
+          src: '/pwa/icon-512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
+      display: 'fullscreen',
+      theme_color: '#233746',
+      background_color: '#252329',
+      start_url: '../index.html',
+    },
+    workbox: {
+      navigateFallback: '/',
+    },
+    devOptions: {
+      enabled: true,
+      type: 'module',
+    },
+  },
   robots: {
     UserAgent: '*',
     Disallow: '',
