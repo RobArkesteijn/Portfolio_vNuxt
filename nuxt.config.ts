@@ -25,7 +25,14 @@ export default defineNuxtConfig({
     'vue3-carousel-nuxt',
     '@nuxt/image',
     '@hypernym/nuxt-gsap',
+    'nuxt-og-image',
   ],
+  site: {
+    url: process.env.NUXT_SITE_URL,
+  },
+  ogImage: {
+    fonts: ['Spectral:200'],
+  },
   gsap: {
     composables: true,
     extraPlugins: {
@@ -43,10 +50,14 @@ export default defineNuxtConfig({
       {
         code: 'en',
         iso: 'en-US',
+        name: 'English',
+        dir: 'ltr',
       },
       {
         code: 'nl',
         iso: 'nl-NL',
+        name: 'Nederlands',
+        dir: 'ltr',
       },
     ],
     customRoutes: 'config',

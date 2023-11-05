@@ -52,6 +52,28 @@ export default defineI18nConfig(() => ({
         harborndigital:
           "We are Harborn, a digital agency that drives strategic growth by connecting valuable data, simplifying complexity, and focusing on human interaction. We build fully integrated digital ecosystems. Future-proof solutions that enhance people's lives. We assist our clients in anticipating and adapting to new ways of working in a rapidly changing world. Always centered on the human experience.",
       },
+      meta: {
+        home: {
+          title: 'Homepage',
+          description:
+            "Rob Arkesteijn's personal website. Where he shares his passion for software development. A showcase of his projects, skills, and experience.",
+        },
+        about: {
+          title: 'About Me',
+          description:
+            'Discover what drives me to create and innovate. Explore my journey and the experiences that have shaped my creative path.',
+        },
+        skills: {
+          title: 'Skills',
+          description:
+            'Discover my skills, expertise, and proficiency. Learn more about my abilities and how I use them to realize my creative vision.',
+        },
+        projects: {
+          title: 'Projects',
+          description:
+            'Explore my portfolio of projects and creative achievements. Explore the outcomes of my efforts in various projects and sectors.',
+        },
+      },
     },
     nl: {
       home: {
@@ -100,6 +122,28 @@ export default defineI18nConfig(() => ({
           'InnoSys Delft BV is het bedrijf voor de ontwikkeling, productie en integratie van innovatieve en duurzame energiesystemen. InnoSys Delft BV beschikt over een schat aan kennis en ervaring op het gebied van energie-elektronica. Haar deskundigheid bestrijkt een breed scala aan toepassingen, van oplossingen voor hernieuwbare energie tot geavanceerde aandrijfsystemen.',
         harborndigital:
           'Wij zijn Harborn, een digitaal bureau dat strategische groei stimuleert door waardevolle data te verbinden, complexiteit te vereenvoudigen en te focussen op menselijke interactie. Wij bouwen volledig geïntegreerde digitale ecosystemen. Toekomstbestendige oplossingen die het leven van mensen verbeteren. We helpen onze klanten te anticiperen op en zich aan te passen aan nieuwe manieren van werken in een wereld die snel verandert. Altijd gericht op de menselijke ervaring.',
+      },
+      meta: {
+        home: {
+          title: 'Homepagina',
+          description:
+            'De persoonlijke website van Rob Arkesteijn. Hier deelt hij zijn passie voor softwareontwikkeling. Een etalage van zijn projecten, vaardigheden en ervaring.',
+        },
+        about: {
+          title: 'Over Mij',
+          description:
+            'Ontdek wat mij drijft om te creëren en innoveren. Verken mijn reis en de ervaringen die mijn creatieve pad hebben gevormd.',
+        },
+        skills: {
+          title: 'Vaardigheden',
+          description:
+            'Ontdek mijn vaardigheden en expertise. Leer meer over mijn bekwaamheden en hoe ik deze inzet om mijn creatieve visie te realiseren.',
+        },
+        projects: {
+          title: 'Projecten',
+          description:
+            'Bekijk mijn portfolio van projecten en creatieve prestaties. Verken de resultaten van mijn inspanningen in verschillende projecten en sectoren.',
+        },
       },
     },
   },

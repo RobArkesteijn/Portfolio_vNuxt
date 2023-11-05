@@ -5,20 +5,27 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 definePageMeta({
   title: 'home.list.projects',
 });
 
 useHead({
   meta: [
-    { property: 'og:title', content: 'this is og title for the projects page' },
-    { name: 'description', content: '[og:description]' },
-    { name: 'og:description', content: '[description]' },
-    { name: 'og:image', content: '[og:image]' },
-    { name: 'twitter:title', content: '[twitter:title]' },
-    { name: 'twitter:description', content: '[twitter:description]' },
-    { name: 'twitter:image', content: '[twitter:image]' },
+    { property: 'og:title', content: t('meta.projects.title') },
+    { name: 'description', content: t('meta.projects.description') },
+    { name: 'og:description', content: t('meta.projects.description') },
+    { name: 'twitter:title', content: t('meta.projects.title') },
+    { name: 'twitter:description', content: t('meta.projects.description') },
     { name: 'twitter:card', content: 'summary' },
   ],
 });
+
+const ogImageOptions = {
+  component: 'ExampleOgImage',
+  title: t('meta.projects.title'),
+};
+
+defineOgImage(ogImageOptions);
 </script>
