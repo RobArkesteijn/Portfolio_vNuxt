@@ -26,7 +26,12 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@hypernym/nuxt-gsap',
     'nuxt-og-image',
+    '@nuxtjs/robots',
   ],
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
+  },
   site: {
     url: process.env.NUXT_SITE_URL,
   },
