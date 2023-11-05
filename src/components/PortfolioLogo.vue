@@ -5,8 +5,7 @@
         src="/logo.png"
         alt="Portfolio logo"
         class="logo__image"
-        height="38"
-        width="38"
+        sizes="xs:38 md:75"
         format="webp"
       />
     </NuxtLinkLocale>
@@ -29,8 +28,6 @@
 
     @include tablet {
       padding: 40px;
-      height: 75px;
-      width: 75px;
     }
 
     @include desktop {
