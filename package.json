@@ -24,6 +24,7 @@
     "nuxt": "^3.8.0",
     "nuxt-icon": "^0.6.1",
     "nuxt-og-image": "^2.2.3",
+    "nuxt-simple-sitemap": "^3.4.1",
     "vite-svg-loader": "^4.0.0"
   },
   "dependencies": {

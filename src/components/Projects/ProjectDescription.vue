@@ -12,7 +12,7 @@
       class="project-description"
     >
       <NuxtImg
-        :src="`/${translationPath}.png`"
+        :src="`${translationPath}.png`"
         :alt="`${$route.query.project} Logo`"
         class="project-description__logo"
         format="webp"
