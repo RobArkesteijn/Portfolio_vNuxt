@@ -28,7 +28,11 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     '@nuxtjs/robots',
     '@vite-pwa/nuxt',
+    'nuxt-simple-sitemap',
   ],
+  image: {
+    provider: 'ipx',
+  },
   pwa: {
     manifest: {
       name: 'R.A. | Portfolio',
@@ -122,5 +126,12 @@ export default defineNuxtConfig({
     detectBrowserLanguage: {
       useCookie: false,
     },
+  },
+  sitemap: {
+    xslColumns: [
+      { label: 'URL', width: '50%' },
+      { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
+      { label: 'Hreflangs', select: 'count(xhtml)', width: '25%' },
+    ],
   },
 });
