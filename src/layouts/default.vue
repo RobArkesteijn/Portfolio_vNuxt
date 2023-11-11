@@ -16,7 +16,23 @@ const title = computed(() => t(route.meta.title));
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta name="theme-color" content="#233746" />
         <Title>{{ `${title} | Rob Arkesteijn` }}</Title>
-        <Link rel="icon" type="image/png" href="/favicon.png" />
+        <Link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple/icon-180.png"
+        />
+        <Link
+          rel="apple-touch-icon-precomposed"
+          sizes="180x180"
+          href="/apple/icon-180.png"
+        />
+        <Link rel="mask-icon" color="#233746" href="/apple/mask-icon.svg" />
+        <Link
+          rel="icon"
+          type="image/x-icon"
+          href="/favicon.ico"
+          sizes="16x16 32x32 48x48 64x64 128x128"
+        />
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"
