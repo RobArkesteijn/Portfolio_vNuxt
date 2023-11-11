@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@vite-pwa/nuxt',
     'nuxt-simple-sitemap',
+    '@nuxtjs/browserconfig',
   ],
   image: {
     provider: 'ipx',
@@ -130,5 +131,9 @@ export default defineNuxtConfig({
       { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
       { label: 'Hreflangs', select: 'count(xhtml)', width: '25%' },
     ],
+  },
+  browserconfig: {
+    TileColor: '#252329',
+    square150x150logo: { '@': { src: 'microsoft-logo.png' } },
   },
 });
