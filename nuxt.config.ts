@@ -86,9 +86,6 @@ export default defineNuxtConfig({
   },
   gsap: {
     composables: true,
-    extraPlugins: {
-      scrollTrigger: true,
-    },
   },
   i18n: {
     baseUrl: 'https://www.robarkes.nl',

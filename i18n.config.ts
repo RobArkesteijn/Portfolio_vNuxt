@@ -11,7 +11,7 @@ export default defineI18nConfig(() => ({
           introBackground:
             'Hi my name is <strong><i>Rob Arkesteijn</i></strong>, after gaining valuable life skills and experiences during my time in the Marines, I pursued a more theoretical path.',
           introPassion:
-            'Driven by a passion for programming, I transitioned to the field of software development, where I have sharpened my skills & expertise to become a successfull <strong><i>Front End Developer</i></strong>.',
+            'Driven by a passion for programming, I transitioned to the field of software development, where I have sharpened my skills & expertise to become a successful <strong><i>Front End Developer</i></strong>.',
           introCurrent:
             'I am currently employed as Junior Front End Developer by the company: <strong><i>Harborn Digital</i></strong>.',
         },
