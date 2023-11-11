@@ -19,9 +19,20 @@ const title = computed(() => t(route.meta.title));
         <Link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="/apple/icon-180.png"
         />
-        <Link rel="icon" type="image/png" href="/favicon.ico" />
+        <Link
+          rel="apple-touch-icon-precomposed"
+          sizes="180x180"
+          href="/apple/icon-180.png"
+        />
+        <Link rel="mask-icon" color="#233746" href="/apple/mask-icon.svg" />
+        <Link
+          rel="icon"
+          type="image/x-icon"
+          href="/favicon.ico"
+          sizes="16x16 32x32 48x48 64x64 128x128"
+        />
         <template v-for="link in head.link" :key="link.id">
           <Link
             :id="link.id"
