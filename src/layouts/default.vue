@@ -1,4 +1,5 @@
 <script setup>
+const localePath = useLocalePath();
 const route = useRoute();
 const { t } = useI18n();
 const head = useLocaleHead({
@@ -51,7 +52,13 @@ const title = computed(() => t(route.meta.title));
         </template>
       </Head>
       <Body>
+        <VitePwaManifest />
+        <TopBlob />
+        <PortfolioLogo />
+        <TheBreadcrumb v-if="$route.path !== localePath('/')" />
         <slot />
+        <LanguageNavigation />
+        <TheFooter />
       </Body>
     </Html>
   </div>
