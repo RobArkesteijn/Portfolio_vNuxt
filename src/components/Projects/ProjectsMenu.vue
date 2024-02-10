@@ -84,7 +84,7 @@ onMounted(() => {
         background-image: linear-gradient(
           to bottom,
           $aquamarine-blue,
-          $baltic-sea
+          $outer-space
         );
       }
     }
@@ -92,7 +92,7 @@ onMounted(() => {
 
   &__item {
     cursor: pointer;
-    background-color: $baltic-sea;
+    background-color: $outer-space;
     width: calc(100% - 20px);
     text-align: center;
     padding: 10px;

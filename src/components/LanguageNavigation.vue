@@ -54,7 +54,7 @@ const switchLocalePath = useSwitchLocalePath();
     font-weight: 200;
     padding: 5px;
     box-shadow: 0 0 10px 0.1px $piction-blue;
-    background-color: $baltic-sea;
+    background-color: $outer-space;
     transition:
       color 0.3s ease,
       box-shadow 0.3s ease,

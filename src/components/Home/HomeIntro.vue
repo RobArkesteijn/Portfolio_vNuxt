@@ -63,7 +63,7 @@
       background-image: linear-gradient(
         to bottom,
         $aquamarine-blue,
-        $baltic-sea
+        $outer-space
       );
     }
   }
