@@ -7,10 +7,10 @@
     >
       <NuxtLinkLocale
         v-if="Number(item) !== index"
-        :to="`/${listPath[index]}`"
+        :to="localePath({ name: item.name })"
         class="animated-stripes__list-item"
       >
-        {{ item }}
+        {{ item.path }}
       </NuxtLinkLocale>
       <div class="animated-stripes__line"></div>
     </div>
@@ -18,17 +18,13 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+const localePath = useLocalePath();
+
+defineProps({
   listItems: {
-    type: Array<String>,
+    type: Array<any>,
     default: () => ['0', '1', '2', '3'],
   },
-});
-
-const listPath = computed(() => {
-  return props.listItems.map((item) => {
-    return item.split(' ').join('-').toLocaleLowerCase();
-  });
 });
 </script>
 
