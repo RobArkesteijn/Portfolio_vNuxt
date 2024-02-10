@@ -31,7 +31,8 @@ export default defineNuxtConfig({
     '@nuxtjs/sitemap',
   ],
   image: {
-    provider: 'ipx',
+    dir: 'assets/images',
+    quality: 80,
   },
   pwa: {
     manifest: {
