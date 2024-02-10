@@ -121,7 +121,7 @@ const slugPath = (path: string) => {
     flex-direction: column;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: $baltic-sea;
+    background-color: $outer-space;
     border: solid 1px $aquamarine-blue;
     border-radius: 5px;
     right: 20px;

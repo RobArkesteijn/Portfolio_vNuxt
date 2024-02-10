@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#252329] w-full relative -z-20">
+  <div class="bg-[#232929] w-full relative -z-20">
     <NuxtImg src="/logo.png" height="50" class="absolute top-10 right-10" />
     <TopBlob class="w-96 h-96 absolute top-0 -z-10" />
     <div class="py-10 px-36 text-[#b2e4db] flex flex-col">

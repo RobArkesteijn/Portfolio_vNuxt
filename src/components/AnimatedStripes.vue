@@ -114,9 +114,9 @@ defineProps({
     height: 3px;
     background: linear-gradient(
       to right,
-      $baltic-sea,
+      $outer-space,
       $aquamarine-blue,
-      $baltic-sea
+      $outer-space
     );
   }
 }
