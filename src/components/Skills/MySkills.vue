@@ -6,14 +6,12 @@
         v-for="(icon, index) in skillsArray"
         :key="`icon-${index}`"
         :href="icon.link"
+        :aria-label="icon.label"
         target="_blank"
+        rel="noopener noreferrer"
         class="my-skills__link"
       >
-        <Icon
-          :name="icon.logo"
-          class="my-skills__icon"
-          :aria-label="icon.label"
-        />
+        <Icon :name="icon.logo" class="my-skills__icon" />
       </NuxtLink>
     </div>
   </div>
