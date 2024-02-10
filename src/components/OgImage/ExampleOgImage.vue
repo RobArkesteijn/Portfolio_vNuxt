@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import LayeredWaves from '@/public/layeredwaves.svg?url';
+import LayeredWaves from '@/assets/images/layeredwaves.svg?url';
 
 // inherited attrs can mess up the satori parser
 defineOptions({
