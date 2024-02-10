@@ -3,9 +3,9 @@
     <HomeIntro />
     <AnimatedStripes
       :list-items="[
-        $t('home.list.aboutMe'),
-        $t('home.list.skills'),
-        $t('home.list.projects'),
+        { path: $t('home.list.aboutMe'), name: 'about' },
+        { path: $t('home.list.skills'), name: 'skills' },
+        { path: $t('home.list.projects'), name: 'projects' },
       ]"
     />
   </div>

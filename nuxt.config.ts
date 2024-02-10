@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     '@nuxtjs/robots',
     '@vite-pwa/nuxt',
-    'nuxt-simple-sitemap',
+    '@nuxtjs/sitemap',
   ],
   image: {
     provider: 'ipx',
