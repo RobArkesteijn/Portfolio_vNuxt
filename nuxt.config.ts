@@ -62,8 +62,8 @@ export default defineNuxtConfig({
         },
       ],
       display: 'fullscreen',
-      theme_color: '#233746',
-      background_color: '#252329',
+      theme_color: '#1b3f4d',
+      background_color: '#232929',
       start_url: '../index.html',
     },
     workbox: {
