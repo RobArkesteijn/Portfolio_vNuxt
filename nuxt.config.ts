@@ -91,7 +91,7 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: 'https://www.robarkes.nl',
     vueI18n: './i18n.config.ts',
-    defaultLocale: 'en',
+    defaultLocale: 'nl',
     locales: [
       {
         code: 'en',

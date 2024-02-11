@@ -4,13 +4,17 @@
       <NuxtLink
         :to="switchLocalePath('en')"
         class="language-navigation__button"
-        :class="{ 'language-navigation__button-active': $i18n.locale === 'en' }"
+        :class="{
+          'language-navigation__button--active': $i18n.locale === 'en',
+        }"
         >EN
       </NuxtLink>
       <NuxtLink
         :to="switchLocalePath('nl')"
         class="language-navigation__button"
-        :class="{ 'language-navigation__button-active': $i18n.locale === 'nl' }"
+        :class="{
+          'language-navigation__button--active': $i18n.locale === 'nl',
+        }"
         >NL
       </NuxtLink>
     </div>
@@ -62,21 +66,15 @@ const switchLocalePath = useSwitchLocalePath();
       box-shadow 0.3s ease,
       opacity 0.3s ease;
 
-    &:hover {
+    @include tablet {
+      font-size: 24px;
+    }
+
+    &--active {
       color: $aquamarine-blue;
       box-shadow: 0 0 10px 0.1px $aquamarine-blue;
       opacity: 1;
     }
-
-    @include tablet {
-      font-size: 24px;
-    }
-  }
-
-  &__button-active {
-    color: $aquamarine-blue;
-    box-shadow: 0 0 10px 0.1px $aquamarine-blue;
-    opacity: 1;
   }
 }
 </style>
