@@ -84,7 +84,7 @@ onMounted(() => {
         background-image: linear-gradient(
           to bottom,
           $aquamarine-blue,
-          $outer-space
+          transparent
         );
       }
     }

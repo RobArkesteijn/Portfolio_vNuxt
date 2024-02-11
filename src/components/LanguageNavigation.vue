@@ -1,18 +1,20 @@
 <template>
-  <div class="language-navigation">
-    <NuxtLink
-      :to="switchLocalePath('en')"
-      class="language-navigation__button"
-      :class="{ 'language-navigation__button-active': $i18n.locale === 'en' }"
-      >EN
-    </NuxtLink>
-    <NuxtLink
-      :to="switchLocalePath('nl')"
-      class="language-navigation__button"
-      :class="{ 'language-navigation__button-active': $i18n.locale === 'nl' }"
-      >NL
-    </NuxtLink>
-  </div>
+  <ClientOnly>
+    <div class="language-navigation">
+      <NuxtLink
+        :to="switchLocalePath('en')"
+        class="language-navigation__button"
+        :class="{ 'language-navigation__button-active': $i18n.locale === 'en' }"
+        >EN
+      </NuxtLink>
+      <NuxtLink
+        :to="switchLocalePath('nl')"
+        class="language-navigation__button"
+        :class="{ 'language-navigation__button-active': $i18n.locale === 'nl' }"
+        >NL
+      </NuxtLink>
+    </div>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">

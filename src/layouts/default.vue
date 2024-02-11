@@ -51,12 +51,15 @@ const title = computed(() => t(route.meta.title));
           />
         </template>
       </Head>
-      <Body>
+      <Body data-cursor="lighting">
         <VitePwaManifest />
+        <CursorFollower />
         <TopBlob />
         <PortfolioLogo />
         <TheBreadcrumb v-if="$route.path !== localePath('/')" />
-        <slot />
+        <main>
+          <slot />
+        </main>
         <LanguageNavigation />
         <TheFooter />
       </Body>

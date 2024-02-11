@@ -1,12 +1,14 @@
 <template>
-  <div class="home-intro">
-    <h1 class="home-intro__title">{{ $t('home.welcome') }}</h1>
-    <div class="home-intro__text-container">
-      <p class="home-intro__text" v-html="$t('home.intro.introBackground')" />
-      <p class="home-intro__text" v-html="$t('home.intro.introPassion')" />
-      <p class="home-intro__text" v-html="$t('home.intro.introCurrent')" />
+  <ClientOnly>
+    <div class="home-intro">
+      <h1 class="home-intro__title">{{ $t('home.welcome') }}</h1>
+      <div class="home-intro__text-container">
+        <p class="home-intro__text" v-html="$t('home.intro.introBackground')" />
+        <p class="home-intro__text" v-html="$t('home.intro.introPassion')" />
+        <p class="home-intro__text" v-html="$t('home.intro.introCurrent')" />
+      </div>
     </div>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts"></script>
@@ -63,7 +65,7 @@
       background-image: linear-gradient(
         to bottom,
         $aquamarine-blue,
-        $outer-space
+        transparent
       );
     }
   }
