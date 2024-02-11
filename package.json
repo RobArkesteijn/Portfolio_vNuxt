@@ -12,7 +12,7 @@
     "lint:js": "eslint --ext \".ts,.vue\" --ignore-path .gitignore src/",
     "lint:prettier": "prettier --check src/",
     "lint": "pnpm run lint:js && pnpm run lint:prettier",
-    "lintfix": "prettier --write --list-different src/ && pnpm run lint:js --fix",
+    "lintfix": "prettier --write --list-different src/ && pnpm run lint:js --fix"
   },
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
