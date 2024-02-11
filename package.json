@@ -13,7 +13,6 @@
     "lint:prettier": "prettier --check src/",
     "lint": "pnpm run lint:js && pnpm run lint:prettier",
     "lintfix": "prettier --write --list-different src/ && pnpm run lint:js --fix",
-    "test": "vitest"
   },
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.4.2",
