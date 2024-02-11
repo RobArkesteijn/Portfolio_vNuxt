@@ -5,9 +5,17 @@
 }
 
 body {
-  background-color: $outer-space;
+  background-image: linear-gradient(
+    to left top,
+    #000000,
+    #0f0e0f,
+    #171819,
+    #1d2022,
+    #232929
+  );
   color: $primary-color;
   font-weight: 200;
+  overflow: hidden;
 
   &::-webkit-scrollbar {
     display: none;
