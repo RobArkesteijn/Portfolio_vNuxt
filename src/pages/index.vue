@@ -1,13 +1,14 @@
 <template>
   <div class="homepage">
     <HomeIntro />
-    <AnimatedStripes
+    <MaintenanceBlock />
+    <!-- <AnimatedStripes
       :list-items="[
         { path: $t('home.list.aboutMe'), name: 'about' },
         { path: $t('home.list.skills'), name: 'skills' },
         { path: $t('home.list.projects'), name: 'projects' },
       ]"
-    />
+    /> -->
   </div>
 </template>
 
@@ -39,16 +40,14 @@ defineOgImage(ogImageOptions);
 
 <style scoped lang="scss">
 .homepage {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-
-  @include tablet {
-    display: flex;
-    min-height: calc(90vh - 108px);
-    gap: 40px;
-  }
+  align-items: center;
 
   @include desktop {
-    gap: 160px;
+    flex-direction: row;
+    gap: 80px;
     min-height: calc(90vh - 128px);
   }
 }

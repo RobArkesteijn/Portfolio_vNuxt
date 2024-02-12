@@ -5,7 +5,10 @@
       <div class="home-intro__text-container">
         <p class="home-intro__text" v-html="$t('home.intro.introBackground')" />
         <p class="home-intro__text" v-html="$t('home.intro.introPassion')" />
-        <p class="home-intro__text" v-html="$t('home.intro.introCurrent')" />
+        <!-- <p class="home-intro__text" v-html="$t('home.intro.introCurrent')" /> -->
+        <div class="home-intro__name">
+          <p>Rob Arkesteijn</p>
+        </div>
       </div>
     </div>
   </ClientOnly>
@@ -30,7 +33,7 @@
 
   @include tablet {
     margin-block: auto;
-    padding: 0 0 0 80px;
+    padding: 80px;
     animation-delay: 2s;
   }
 
@@ -70,7 +73,8 @@
     }
   }
 
-  &__text {
+  &__text,
+  &__name {
     padding-block: 10px;
     padding-left: 20px;
 
@@ -81,6 +85,13 @@
     @include desktop-xl {
       font-size: 24px;
     }
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 1px 1px 5px $pickelwood-blue;
+    margin-left: auto;
   }
 }
 </style>

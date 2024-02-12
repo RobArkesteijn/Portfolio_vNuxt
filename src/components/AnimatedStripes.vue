@@ -36,7 +36,7 @@ defineProps({
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 50vh;
+  height: 33vh;
   width: calc(100vw - 40px);
   padding: 0 20px 40px;
   animation: slide-in 2s forwards ease;
