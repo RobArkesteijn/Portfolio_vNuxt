@@ -5,7 +5,7 @@
       <div class="home-intro__text-container">
         <p class="home-intro__text" v-html="$t('home.intro.introBackground')" />
         <p class="home-intro__text" v-html="$t('home.intro.introPassion')" />
-        <p class="home-intro__text" v-html="$t('home.intro.introCurrent')" />
+        <!-- <p class="home-intro__text" v-html="$t('home.intro.introCurrent')" /> -->
         <div class="home-intro__name">
           <p>Rob Arkesteijn</p>
         </div>
