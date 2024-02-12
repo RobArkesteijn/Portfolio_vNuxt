@@ -9,11 +9,11 @@ export default defineI18nConfig(() => ({
         welcome: 'Welcome.',
         intro: {
           introBackground:
-            'Hi my name is <strong><i>Rob Arkesteijn</i></strong>, after gaining valuable life skills and experiences during my time in the Marines, I pursued a more theoretical path.',
+            'As a passionate <strong><i>Front End Developer</i></strong>, I share my creative journey here, where code, design, and captivating animations converge. With a passion for innovation and aesthetics, I strive for new approaches within front-end development.',
           introPassion:
-            'Driven by a passion for programming, I transitioned to the field of software development, where I have sharpened my skills & expertise to become a successful <strong><i>Front End Developer</i></strong>.',
+            'My focus extends beyond sharing technical insights; I also emphasize creating reusable code for a dynamic and immersive user experience.',
           introCurrent:
-            'I am currently employed as Junior Front End Developer by the company: <strong><i>Harborn Digital</i></strong>.',
+            'Explore on this site my unique perspectives, creative developments, and the art of shaping interactive digital worlds.',
         },
         list: {
           aboutMe: 'About Me',
@@ -21,6 +21,9 @@ export default defineI18nConfig(() => ({
           projects: 'Projects',
           skills: 'Skills',
         },
+      },
+      maintenance: {
+        title: 'This site is currently under maintenance',
       },
       aboutMe: {
         title: 'Who am I?',
@@ -96,11 +99,11 @@ export default defineI18nConfig(() => ({
         welcome: 'Welkom.',
         intro: {
           introBackground:
-            'Hallo mijn naam is <strong><i>Rob Arkesteijn</i></strong>, na het opdoen van waardevolle levensvaardigheden en ervaringen tijdens mijn tijd bij de marine, ben ik een meer theoretisch pad ingeslagen.',
+            'Als gedreven <strong><i>Front End Developer</i></strong> deel ik hier mijn creatieve reis, waar code, ontwerp en boeiende animaties samenkomen. Met een passie voor innovatie en esthetiek streef ik naar nieuwe benaderingen binnen front-end development.',
           introPassion:
-            'Gedreven door mijn passie voor programmeren ben ik software gaan ontwikkelen, waar ik mijn vaardigheden en expertise heb aangescherpt om een succesvolle <strong><i>Front End Developer</i></strong> te worden.',
+            'Mijn focus ligt niet alleen op het delen van mijn technische inzichten, maar ook op het creëren van herbruikbare code voor een dynamische en meeslepende gebruikerservaring.',
           introCurrent:
-            'Ik werk momenteel als Junior Front End Developer bij het bedrijf: <strong><i>Harborn Digital</i></strong>.',
+            'Ontdek op deze site mijn unieke perspectieven, creatieve ontwikkelingen en de kunst van het vormgeven van interactieve digitale werelden.',
         },
         list: {
           aboutMe: 'Over mij',
@@ -108,6 +111,9 @@ export default defineI18nConfig(() => ({
           projects: 'Projecten',
           skills: 'Vaardigheden',
         },
+      },
+      maintenance: {
+        title: 'Deze site is momenteel in onderhoud',
       },
       aboutMe: {
         title: 'Wie ben ik?',
