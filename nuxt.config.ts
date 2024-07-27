@@ -120,6 +120,13 @@ export default defineNuxtConfig({
     '@nuxt/icon',
   ],
 
+  nitro: {
+    firebase: {
+      nodeVersion: '20',
+      gen: 2,
+    },
+  },
+
   ogImage: {
     fonts: ['Spectral:200'],
   },

@@ -1,14 +1,12 @@
 {
   "functions": {
-    "source": ".output/server"
+    "source": ".output/server",
+    "runtime": "nodejs20"
   },
   "hosting": {
-    "public": ".output/public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "site": "portfolio-11323",
+    "public": ".output/publicg",
+    "cleanUrls": true,
     "rewrites": [
       {
         "source": "**",
