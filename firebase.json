@@ -5,7 +5,7 @@
   },
   "hosting": {
     "site": "portfolio-11323",
-    "public": ".output/publicg",
+    "public": ".output/public",
     "cleanUrls": true,
     "rewrites": [
       {
