@@ -10,7 +10,11 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Use Node.js 22.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          cache: 'pnpm'
       - name: Install pnpm
         uses: pnpm/action-setup@v2
         with:

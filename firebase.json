@@ -1,4 +1,7 @@
 {
+  "functions": {
+    "source": ".output/server"
+  },
   "hosting": {
     "public": ".output/public",
     "ignore": [
@@ -9,7 +12,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/index.html"
+        "function": "server"
       }
     ]
   }
