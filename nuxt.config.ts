@@ -110,8 +110,8 @@ export default defineNuxtConfig({
   },
 
   image: {
-    dir: 'assets/images',
     quality: 80,
+    format: ['webp'],
   },
 
   modules: [

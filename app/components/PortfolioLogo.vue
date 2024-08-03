@@ -2,17 +2,12 @@
   <div class="logo">
     <NuxtLinkLocale to="/">
       <NuxtImg
-        src="/logo.png"
-        alt="Portfolio logo"
+        src="/images/logo.png"
         class="logo__image"
-        sizes="xs:38 md:75"
-        format="webp"
       />
     </NuxtLinkLocale>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 .logo {
@@ -25,9 +20,11 @@
   &__image {
     padding: 20px;
     text-shadow: 0 0 2px $black;
+    height: 38px;
 
     @include tablet {
       padding: 40px;
+      height: 75px;
     }
 
     @include desktop {

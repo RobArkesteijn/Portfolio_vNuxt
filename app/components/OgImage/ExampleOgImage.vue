@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#232929] w-full relative -z-20">
     <NuxtImg
-      src="/logo.png"
+      src="/images/logo.png"
       height="50"
       class="absolute top-10 right-10"
     />
@@ -14,7 +14,7 @@
         {{ description }}
       </p>
       <NuxtImg
-        src="/portfolio.png"
+        src="/images/portfolio.png"
         height="100"
         class="self-end"
       />
@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import LayeredWaves from '@/assets/images/layeredwaves.svg?url'
+import LayeredWaves from '@/assets/icons/layeredwaves.svg?url'
 
 // inherited attrs can mess up the satori parser
 defineOptions({
