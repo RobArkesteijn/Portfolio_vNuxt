@@ -2,17 +2,13 @@
   <div class="logo">
     <NuxtLinkLocale to="/">
       <NuxtImg
-        src="/logo.png"
-        alt="Portfolio logo"
+        src="/images/logo.png"
         class="logo__image"
         sizes="xs:38 md:75"
-        format="webp"
       />
     </NuxtLinkLocale>
   </div>
 </template>
-
-<script setup lang="ts"></script>
 
 <style scoped lang="scss">
 .logo {

@@ -18,12 +18,14 @@
 </template>
 
 <script setup lang="ts">
+import type { ListItem } from '@/types'
+
 const localePath = useLocalePath()
 
 defineProps({
   listItems: {
-    type: Array<any>,
-    default: () => ['0', '1', '2', '3'],
+    type: Array as PropType<ListItem[]>,
+    default: () => [],
   },
 })
 </script>

@@ -12,10 +12,8 @@
       class="project-description"
     >
       <NuxtImg
-        :src="`${translationPath}.png`"
-        :alt="`${route.query.project} Logo`"
+        :src="`/images/${translationPath}.png`"
         class="project-description__logo"
-        format="webp"
       />
       <p
         class="project-description__text"
@@ -58,22 +56,24 @@ const translationPath = computed(() => {
   }
 })
 
-const beforeLeave = (el: any) => {
+const beforeLeave = (el: Element) => {
   prevHeight.value = getComputedStyle(el).height
 }
 
-const enter = (el: any) => {
-  const { height } = getComputedStyle(el)
+const enter = (el: Element) => {
+  const element = el as HTMLElement
+  const { height } = getComputedStyle(element)
 
-  el.style.height = prevHeight.value
+  element.style.height = prevHeight.value
 
   setTimeout(() => {
-    el.style.height = height
+    element.style.height = height
   })
 }
 
-const afterEnter = (el: any) => {
-  el.style.height = 'auto'
+const afterEnter = (el: Element) => {
+  const element = el as HTMLElement
+  element.style.height = 'auto'
 }
 </script>
 
