@@ -13,6 +13,10 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
+    "@iconify-json/devicon": "^1.1.49",
+    "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/logos": "^1.1.43",
+    "@iconify-json/vscode-icons": "^1.1.36",
     "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^0.3.13",
     "eslint": "^9.8.0",
