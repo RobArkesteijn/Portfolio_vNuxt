@@ -130,14 +130,6 @@ onMounted(() => {
     text-shadow: 1px 1px 1px $black;
     font-weight: 200;
     text-align: center;
-    animation: fade-in 2s forwards ease;
-    opacity: 0;
-
-    @keyframes fade-in {
-      to {
-        opacity: 1;
-      }
-    }
 
     @include tablet {
       padding-top: 111px;
@@ -165,8 +157,8 @@ onMounted(() => {
     padding: 10px;
     border: 1px solid transparent;
     transition:
-      border 0.3s ease,
-      box-shadow 0.3s ease;
+      border $default-duration ease,
+      box-shadow $default-duration ease;
 
     &:hover {
       border: 1px solid $aquamarine-blue;

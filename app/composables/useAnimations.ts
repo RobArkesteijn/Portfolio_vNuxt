@@ -1,15 +1,13 @@
 import { gsap } from 'gsap'
 
 export default () => {
-  const staggerIcons = (elClass: string) => {
-    const tl = gsap.timeline()
-    tl.to(elClass, {
-      duration: 1,
+  const staggerIcons = (el: string) => {
+    gsap.to(el, {
+      duration: 0.5,
       scale: 1,
-      ease: 'power1.inOut',
       stagger: {
-        amount: 1.5,
-        grid: [5, 3],
+        amount: 0.5,
+        grid: 'auto',
         from: 'center',
       },
     })

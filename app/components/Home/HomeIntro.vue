@@ -28,16 +28,8 @@
 .home-intro {
   padding: 20px;
   color: $powder-blue;
-  animation: fade-in 2s forwards ease;
-  opacity: 0;
   z-index: 1;
   position: relative;
-
-  @keyframes fade-in {
-    to {
-      opacity: 1;
-    }
-  }
 
   @include tablet {
     margin-block: auto;

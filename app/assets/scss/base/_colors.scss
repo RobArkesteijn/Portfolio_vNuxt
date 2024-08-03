@@ -1,0 +1,32 @@
+// Blue
+$aero-blue: #a9fbd7;
+$aqua-island: #a4ccda;
+$aquamarine-blue: #65e1ca;
+$blue-dianna: #1b3f4d;
+$foam: #d7fdec;
+$pickelwood-blue: #233746;
+$piction-blue: #50b9df;
+$powder-blue: #b2e4db;
+
+// Primary & Secondary
+$primary-color: $powder-blue;
+
+// Dark
+$outer-space: #232929;
+$woodsmoke: #171819;
+
+//Neutral
+$black: #000000;
+$white: #ffffff;
+
+// Gradient colors
+$gradient-color-opacity: 0.5;
+$gradient-color: $pickelwood-blue;
+$gradient-background:
+  radial-gradient(18% 28% at 24% 50%, rgba($gradient-color, $gradient-color-opacity) 7%, transparent 100%),
+  radial-gradient(18% 28% at 90% 10%, rgba($gradient-color, $gradient-color-opacity) 6%, transparent 100%),
+  radial-gradient(27% 27% at 29% 87%, rgba($gradient-color, $gradient-color-opacity) 0%, transparent 100%),
+  radial-gradient(20% 30% at 2% 0%, rgba($gradient-color, $gradient-color-opacity) 0%, transparent 100%),
+  radial-gradient(21% 37% at 51% 8%, rgba($gradient-color, $gradient-color-opacity) 24%, transparent 100%),
+  radial-gradient(35% 56% at 91% 74%, rgba($gradient-color, $gradient-color-opacity) 9%, transparent 100%),
+  radial-gradient(18% 20% at 71% 45%, rgba($gradient-color, $gradient-color-opacity) 24%, transparent 100%);

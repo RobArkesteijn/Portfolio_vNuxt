@@ -13,8 +13,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fade-in 2s forwards ease;
-  opacity: 0;
   z-index: 1;
   position: relative;
   min-height: calc(90vh - 108px);

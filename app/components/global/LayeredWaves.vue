@@ -53,8 +53,6 @@
   </svg>
 </template>
 
-<script setup lang="ts"></script>
-
 <style scoped lang="scss">
 .waves {
   z-index: -1;

@@ -34,16 +34,8 @@ defineProps({
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation: fade-in 2s forwards ease;
-  opacity: 0;
   z-index: 1;
   position: relative;
-
-  @keyframes fade-in {
-    to {
-      opacity: 1;
-    }
-  }
 
   &__title {
     padding-top: 91.5px;
@@ -110,7 +102,7 @@ defineProps({
     }
 
     &--sliding {
-      transition: opacity 0.5s ease;
+      transition: opacity $default-duration ease;
     }
 
     &--active {

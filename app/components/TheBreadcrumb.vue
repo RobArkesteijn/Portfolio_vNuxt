@@ -81,17 +81,9 @@ const slugPath = (path: string) => {
   position: absolute;
   padding: 20px;
   z-index: 99;
-  animation: fade-in 2s forwards ease;
-  opacity: 0;
   display: flex;
   align-items: flex-start;
   font-size: 20px;
-
-  @keyframes fade-in {
-    to {
-      opacity: 1;
-    }
-  }
 
   @include tablet {
     padding: 40px;
@@ -106,7 +98,7 @@ const slugPath = (path: string) => {
     font-size: 1em;
     color: $powder-blue;
     padding-inline: 10px;
-    transition: rotate 0.3s ease;
+    transition: rotate $default-duration ease;
     margin-top: 5.75px;
   }
 
@@ -136,7 +128,7 @@ const slugPath = (path: string) => {
     border: solid 1px $aquamarine-blue;
     border-radius: 5px;
     right: 20px;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow $default-duration ease;
 
     &:hover {
       box-shadow: 0 0 15px $aquamarine-blue;
@@ -146,7 +138,7 @@ const slugPath = (path: string) => {
   &__item {
     margin-block: 5px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all $default-duration ease;
     border-bottom: 1px solid transparent;
     color: $powder-blue;
     text-decoration: none;
@@ -161,7 +153,7 @@ const slugPath = (path: string) => {
 
 .list-enter-active,
 .list-leave-active {
-  transition: opacity 0.3s ease;
+  transition: opacity $default-duration ease;
 }
 
 .list-enter-from,

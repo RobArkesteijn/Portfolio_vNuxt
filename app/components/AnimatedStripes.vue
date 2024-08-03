@@ -39,13 +39,6 @@ defineProps({
   height: 50vh;
   width: calc(100vw - 40px);
   padding: 0 20px 40px;
-  animation: slide-in 2s forwards ease;
-
-  @keyframes slide-in {
-    from {
-      margin-left: -100%;
-    }
-  }
 
   @include tablet {
     margin-block: auto;
@@ -83,16 +76,8 @@ defineProps({
     text-decoration: none;
     font-size: 24px;
     transition:
-      color 0.3s ease,
-      text-shadow 0.3s ease;
-    animation: fade-in 2s forwards ease;
-    opacity: 0;
-
-    @keyframes fade-in {
-      to {
-        opacity: 1;
-      }
-    }
+      color $default-duration ease,
+      text-shadow $default-duration ease;
 
     &:hover {
       color: $foam;
