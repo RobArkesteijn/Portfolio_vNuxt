@@ -15,19 +15,22 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxt/eslint": "^0.3.13",
+    "eslint": "^9.8.0",
+    "wrangler": "^3.68.0"
+  },
+  "dependencies": {
     "@nuxt/icon": "^1.4.4",
+    "@nuxt/image": "^1.7.0",
+    "@nuxthub/core": "^0.7.1",
     "@nuxtjs/i18n": "^8.3.3",
     "@nuxtjs/seo": "2.0.0-rc.16",
     "@vite-pwa/nuxt": "^0.9.1",
-    "eslint": "^9.8.0",
-    "nuxt": "^3.12.4",
-    "vite-svg-loader": "^5.1.0"
-  },
-  "dependencies": {
-    "@nuxt/image": "^1.7.0",
     "@vueuse/core": "^10.11.0",
     "gsap": "^3.12.5",
+    "nuxt": "^3.12.4",
     "sass": "^1.77.8",
+    "vite-svg-loader": "^5.1.0",
+    "vue": "latest",
     "vue3-carousel-nuxt": "^1.1.2"
   }
 }

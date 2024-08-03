@@ -22,10 +22,10 @@ useHead({
   ],
 })
 
-const ogImageOptions = {
-  component: 'ExampleOgImage',
-  title: t('meta.skills.title'),
-}
+// const ogImageOptions = {
+//   component: 'ExampleOgImage',
+//   title: t('meta.skills.title'),
+// }
 
-defineOgImage(ogImageOptions)
+// defineOgImage(ogImageOptions)
 </script>
