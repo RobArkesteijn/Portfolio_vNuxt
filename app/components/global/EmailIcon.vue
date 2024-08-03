@@ -13,20 +13,18 @@
   </svg>
 </template>
 
-<script lang="ts" setup></script>
-
 <style scoped lang="scss">
 svg {
-  transition: fill 0.3s ease;
+  transition: fill $default-duration ease;
 
   &:hover {
     path {
-      filter: drop-shadow(0 0 1px $piction-blue);
+      filter: drop-shadow(0 0 3px $outer-space);
     }
   }
 
   path {
-    transition: filter 0.3s ease;
+    transition: filter $default-duration ease;
   }
 }
 </style>

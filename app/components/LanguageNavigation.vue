@@ -33,14 +33,6 @@ const switchLocalePath = useSwitchLocalePath()
   position: relative;
   z-index: 99;
   gap: 20px;
-  animation: fade-in 2s forwards ease;
-  opacity: 0;
-
-  @keyframes fade-in {
-    to {
-      opacity: 1;
-    }
-  }
 
   @include tablet {
     gap: 40px;
@@ -62,9 +54,9 @@ const switchLocalePath = useSwitchLocalePath()
     box-shadow: 0 0 10px 0.1px $piction-blue;
     background-color: $outer-space;
     transition:
-      color 0.3s ease,
-      box-shadow 0.3s ease,
-      opacity 0.3s ease;
+      color $default-duration ease,
+      box-shadow $default-duration ease,
+      opacity $default-duration ease;
 
     @include tablet {
       font-size: 24px;

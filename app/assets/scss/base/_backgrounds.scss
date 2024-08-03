@@ -1,0 +1,15 @@
+.gradient-background {
+  background-size: 400% 400%;
+  background-image: $gradient-background;
+  background-color: $woodsmoke;
+  background-repeat: no-repeat;
+  animation: gradientPositionAnimation 30s ease infinite alternate;
+
+  @include tablet {
+    background-size: 300% 300%;
+  }
+
+  @include desktop {
+    background-size: 200% 200%;
+  }
+}

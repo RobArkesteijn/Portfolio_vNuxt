@@ -18,8 +18,6 @@
   </svg>
 </template>
 
-<script setup lang="scss"></script>
-
 <style scoped lang="scss">
 .blob {
   position: absolute;

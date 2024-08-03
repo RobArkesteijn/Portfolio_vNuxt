@@ -18,8 +18,8 @@ const { x: mouseX, y: mouseY } = useMouse({ type: 'client' })
 const position = { x: mouseX, y: mouseY }
 const velocity = { x: 0, y: 0 }
 
-let xSetter: Function | null = null
-let ySetter: Function | null = null
+let xSetter: ((value: Ref<number>) => void) | null = null
+let ySetter: ((value: Ref<number>) => void) | null = null
 
 const setCursorType = (dataCursorValue: string) => {
   type.value = dataCursorValue
@@ -36,15 +36,15 @@ const onMouseMove = (e: MouseEvent): void => {
     duration: 1.25,
     ease: 'Expo.easeOut',
     onUpdate: () => {
-      velocity.x = x - position.x
-      velocity.y = y - position.y
+      velocity.x = x - position.x.value
+      velocity.y = y - position.y.value
     },
   })
 }
 
 const loop = () => {
-  xSetter(position.x)
-  ySetter(position.y)
+  if (xSetter) xSetter(position.x)
+  if (ySetter) ySetter(position.y)
 }
 
 // Add event listeners to all elements which should show hover
@@ -67,8 +67,8 @@ const initHoverElements = () => {
 }
 
 onMounted(() => {
-  xSetter = gsap.quickSetter(cursor.value, 'x', 'px')
-  ySetter = gsap.quickSetter(cursor.value, 'y', 'px')
+  xSetter = gsap.quickSetter(cursor.value, 'x', 'px') as (value: Ref<number>) => void
+  ySetter = gsap.quickSetter(cursor.value, 'y', 'px') as (value: Ref<number>) => void
 
   initHoverElements()
 })
@@ -94,10 +94,10 @@ $transition-duration: 0.16s;
   &--lighting {
     background-color: $outer-space;
     border-radius: 50%;
-    opacity: 0.5;
-    inline-size: 200px;
-    block-size: 200px;
-    box-shadow: 0 0 100px 100px $outer-space;
+    opacity: 0.1;
+    inline-size: 400px;
+    block-size: 400px;
+    box-shadow: 0 0 200px 200px $outer-space;
   }
 }
 </style>

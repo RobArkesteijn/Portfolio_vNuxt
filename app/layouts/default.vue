@@ -2,12 +2,14 @@
 const localePath = useLocalePath()
 const route = useRoute()
 const { t } = useI18n()
+
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true,
 })
-const title = computed(() => t(route.meta.title))
+
+const title = computed(() => t(route.meta.title as string))
 </script>
 
 <template>
@@ -70,12 +72,15 @@ const title = computed(() => t(route.meta.title))
           />
         </template>
       </Head>
-      <Body data-cursor="lighting">
+      <Body
+        data-cursor="lighting"
+        class="gradient-background"
+      >
         <!-- <VitePwaManifest /> -->
         <CursorFollower />
         <TopBlob />
         <PortfolioLogo />
-        <TheBreadcrumb v-if="$route.path !== localePath('/')" />
+        <TheBreadcrumb v-if="route.path !== localePath('/')" />
         <main>
           <slot />
         </main>

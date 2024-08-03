@@ -7,13 +7,13 @@
     @after-enter="afterEnter"
   >
     <div
-      v-if="$route.query.project"
+      v-if="route.query.project"
       :key="translationPath"
       class="project-description"
     >
       <NuxtImg
         :src="`${translationPath}.png`"
-        :alt="`${$route.query.project} Logo`"
+        :alt="`${route.query.project} Logo`"
         class="project-description__logo"
         format="webp"
       />
@@ -25,8 +25,10 @@
         <NuxtLink
           class="project-description__link"
           to="https://www.harborn.com"
-          target="_blank"
-        >Website</NuxtLink>
+          external
+        >
+          Website
+        </NuxtLink>
       </div>
     </div>
     <div
@@ -39,11 +41,12 @@
 </template>
 
 <script setup lang="ts">
-const { $router } = useNuxtApp()
+const router = useRouter()
+const route = useRoute()
 const prevHeight = ref()
 
 const translationPath = computed(() => {
-  const project = $router.currentRoute.value.query.project as string
+  const project = router.currentRoute.value.query.project as string
   if (project) {
     return project
       .toLowerCase()
@@ -139,8 +142,8 @@ const afterEnter = (el: any) => {
 .fade-in-enter-active,
 .fade-in-leave-active {
   transition:
-    opacity 0.5s ease,
-    height 0.5s ease;
+    opacity $default-duration ease,
+    height $default-duration ease;
 }
 
 .fade-in-enter-from,

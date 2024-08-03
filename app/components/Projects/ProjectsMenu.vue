@@ -9,7 +9,7 @@
         :key="`projects-${index}`"
         class="projects-menu__item"
         :class="{
-          'projects-menu__item-active': $route.query.project === project,
+          'projects-menu__item-active': route.query.project === project,
         }"
         @click="setProjectQuery(project)"
       >
@@ -100,8 +100,8 @@ onMounted(() => {
     padding: 10px;
     color: $aquamarine-blue;
     transition:
-      color 0.3s ease,
-      text-shadow 0.3s ease;
+      color $default-duration ease,
+      text-shadow $default-duration ease;
 
     @include tablet {
       background-color: unset;

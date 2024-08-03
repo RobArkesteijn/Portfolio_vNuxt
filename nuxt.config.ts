@@ -45,6 +45,10 @@ export default defineNuxtConfig({
     },
   },
 
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
+
   compatibilityDate: '2024-07-27',
 
   components: [
@@ -54,7 +58,7 @@ export default defineNuxtConfig({
     },
   ],
 
-  css: ['@/assets/scss/main.scss'],
+  css: ['@/assets/scss/app.scss'],
 
   devtools: { enabled: true },
 
@@ -149,7 +153,11 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "@/assets/scss/_variables.scss" as *;',
+          additionalData: `
+          @import "./app/assets/scss/base/_colors.scss"; 
+          @import "./app/assets/scss/base/_variables.scss"; 
+          @import "./app/assets/scss/helpers/_mixins.scss"; 
+          `,
         },
       },
     },

@@ -2,7 +2,7 @@
   <div class="footer">
     <NuxtLink
       href="mailto:rarkesteijn@outlook.com"
-      target="_blank"
+      external
       class="footer__link"
       :aria-label="$t('footer.email')"
     >
@@ -10,16 +10,16 @@
     </NuxtLink>
     <NuxtLink
       href="https://www.linkedin.com/in/rob-arkesteijn-394550267/"
-      target="_blank"
       class="footer__link"
+      external
       :aria-label="$t('footer.linkedin')"
     >
       <LinkedinIcon class="footer__icon" />
     </NuxtLink>
     <NuxtLink
       href="https://github.com/RobArkesteijn"
-      target="_black"
       class="footer__link"
+      external
       :aria-label="$t('footer.github')"
     >
       <GitHub class="footer__icon" />
@@ -39,14 +39,6 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  animation: fade-in 2s forwards ease;
-  opacity: 0;
-
-  @keyframes fade-in {
-    to {
-      opacity: 1;
-    }
-  }
 
   @include tablet {
     animation-delay: 2s;

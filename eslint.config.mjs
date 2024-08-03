@@ -6,6 +6,7 @@ export default withNuxt(
     files: ['**/*.ts', '**/*.js', '**/*.vue'],
     rules: {
       'nuxt/prefer-import-meta': 'error',
+      'vue/no-v-html': 'off',
     },
   },
 )
