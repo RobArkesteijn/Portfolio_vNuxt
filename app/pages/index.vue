@@ -29,12 +29,12 @@ useHead({
   ],
 })
 
-const ogImageOptions = {
-  component: 'ExampleOgImage',
-  title: t('meta.home.title'),
-}
+// const ogImageOptions = {
+//   component: 'ExampleOgImage',
+//   title: t('meta.home.title'),
+// }
 
-defineOgImage(ogImageOptions)
+// defineOgImage(ogImageOptions)
 </script>
 
 <style scoped lang="scss">

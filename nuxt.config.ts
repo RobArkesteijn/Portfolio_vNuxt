@@ -1,49 +1,49 @@
 import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
-  $production: {
-    pwa: {
-      manifest: {
-        name: 'R.A. | Portfolio',
-        short_name: 'Portfolio',
-        description:
-          'Rob Arkesteijn\'s personal website. Where he shares his passion for software development. A showcase of his projects, skills, and experience.',
-        icons: [
-          {
-            src: '/pwa/icon-64.png',
-            sizes: '64x64',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa/icon-144.png',
-            sizes: '144x144',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa/icon-192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa/icon-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-        display: 'fullscreen',
-        theme_color: '#1b3f4d',
-        background_color: '#232929',
-        start_url: '../index.html',
-      },
-      workbox: {
-        navigateFallback: '/',
-      },
-      devOptions: {
-        enabled: true,
-        type: 'module',
-      },
-    },
-  },
+  // $production: {
+  //   pwa: {
+  //     manifest: {
+  //       name: 'R.A. | Portfolio',
+  //       short_name: 'Portfolio',
+  //       description:
+  //         'Rob Arkesteijn\'s personal website. Where he shares his passion for software development. A showcase of his projects, skills, and experience.',
+  //       icons: [
+  //         {
+  //           src: '/pwa/icon-64.png',
+  //           sizes: '64x64',
+  //           type: 'image/png',
+  //         },
+  //         {
+  //           src: '/pwa/icon-144.png',
+  //           sizes: '144x144',
+  //           type: 'image/png',
+  //         },
+  //         {
+  //           src: '/pwa/icon-192.png',
+  //           sizes: '192x192',
+  //           type: 'image/png',
+  //         },
+  //         {
+  //           src: '/pwa/icon-512.png',
+  //           sizes: '512x512',
+  //           type: 'image/png',
+  //         },
+  //       ],
+  //       display: 'fullscreen',
+  //       theme_color: '#1b3f4d',
+  //       background_color: '#232929',
+  //       start_url: '../index.html',
+  //     },
+  //     workbox: {
+  //       navigateFallback: '/',
+  //     },
+  //     devOptions: {
+  //       enabled: true,
+  //       type: 'module',
+  //     },
+  //   },
+  // },
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -118,21 +118,16 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     'vue3-carousel-nuxt',
     '@nuxt/image',
-    '@vite-pwa/nuxt',
+    // '@vite-pwa/nuxt',
     '@nuxtjs/seo',
     '@nuxt/eslint',
     '@nuxt/icon',
+    '@nuxthub/core',
   ],
-
-  nitro: {
-    firebase: {
-      nodeVersion: '20',
-      gen: 2,
-    },
-  },
 
   ogImage: {
     fonts: ['Spectral:200'],
+    enabled: false,
   },
 
   robots: {
